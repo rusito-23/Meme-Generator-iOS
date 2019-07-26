@@ -14,7 +14,14 @@
 		7800935F22EA427B003857DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7800935D22EA427B003857DD /* LaunchScreen.storyboard */; };
 		7800936B22EA43CB003857DD /* closeness in Resources */ = {isa = PBXBuildFile; fileRef = 7800936A22EA43CB003857DD /* closeness */; };
 		7800936D22EA47CB003857DD /* MemeFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7800936C22EA47CB003857DD /* MemeFormViewController.swift */; };
-		783F5E4A22EB9A3000ECCDE9 /* ViewController+LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783F5E4922EB9A3000ECCDE9 /* ViewController+LoadingView.swift */; };
+		783F5E4A22EB9A3000ECCDE9 /* UIViewController+LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783F5E4922EB9A3000ECCDE9 /* UIViewController+LoadingView.swift */; };
+		783F5E4C22EB9C7200ECCDE9 /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 783F5E4B22EB9C7200ECCDE9 /* Lottie.framework */; };
+		783F5E4D22EB9C7200ECCDE9 /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 783F5E4B22EB9C7200ECCDE9 /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		783F5E4F22EB9C9C00ECCDE9 /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 783F5E4E22EB9C9C00ECCDE9 /* SwiftyBeaver.framework */; };
+		783F5E5022EB9C9C00ECCDE9 /* SwiftyBeaver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 783F5E4E22EB9C9C00ECCDE9 /* SwiftyBeaver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		783F5E5422EB9D6400ECCDE9 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783F5E5322EB9D6400ECCDE9 /* LoadingView.swift */; };
+		783F5E5622EB9DE700ECCDE9 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 783F5E5522EB9DE700ECCDE9 /* LoadingView.xib */; };
+		783F5E5922EBA0E200ECCDE9 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 783F5E5822EBA0E100ECCDE9 /* loading.json */; };
 		7882DA1222EB7643007632BE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7882DA1122EB7643007632BE /* Alamofire.framework */; };
 		7882DA1422EB7648007632BE /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7882DA1122EB7643007632BE /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7882DA1722EB7687007632BE /* MemeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7882DA1622EB7687007632BE /* MemeService.swift */; };
@@ -33,6 +40,8 @@
 			dstSubfolderSpec = 10;
 			files = (
 				7882DA1422EB7648007632BE /* Alamofire.framework in Embed Frameworks */,
+				783F5E5022EB9C9C00ECCDE9 /* SwiftyBeaver.framework in Embed Frameworks */,
+				783F5E4D22EB9C7200ECCDE9 /* Lottie.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -49,7 +58,12 @@
 		7800936022EA427B003857DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7800936A22EA43CB003857DD /* closeness */ = {isa = PBXFileReference; lastKnownFileType = folder; path = closeness; sourceTree = "<group>"; };
 		7800936C22EA47CB003857DD /* MemeFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeFormViewController.swift; sourceTree = "<group>"; };
-		783F5E4922EB9A3000ECCDE9 /* ViewController+LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+LoadingView.swift"; sourceTree = "<group>"; };
+		783F5E4922EB9A3000ECCDE9 /* UIViewController+LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+LoadingView.swift"; sourceTree = "<group>"; };
+		783F5E4B22EB9C7200ECCDE9 /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
+		783F5E4E22EB9C9C00ECCDE9 /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
+		783F5E5322EB9D6400ECCDE9 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		783F5E5522EB9DE700ECCDE9 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		783F5E5822EBA0E100ECCDE9 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		7882DA1122EB7643007632BE /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		7882DA1622EB7687007632BE /* MemeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeService.swift; sourceTree = "<group>"; };
 		788A560922EB6A740009E2F7 /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
@@ -65,6 +79,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7882DA1222EB7643007632BE /* Alamofire.framework in Frameworks */,
+				783F5E4F22EB9C9C00ECCDE9 /* SwiftyBeaver.framework in Frameworks */,
+				783F5E4C22EB9C7200ECCDE9 /* Lottie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +90,8 @@
 		7800934822EA4278003857DD = {
 			isa = PBXGroup;
 			children = (
+				783F5E4E22EB9C9C00ECCDE9 /* SwiftyBeaver.framework */,
+				783F5E4B22EB9C7200ECCDE9 /* Lottie.framework */,
 				7800935322EA4278003857DD /* MemeGenerator */,
 				7800935222EA4278003857DD /* Products */,
 				7882DA1022EB7643007632BE /* Frameworks */,
@@ -91,6 +109,8 @@
 		7800935322EA4278003857DD /* MemeGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				783F5E5722EB9FE800ECCDE9 /* Lotties */,
+				783F5E5122EB9D4B00ECCDE9 /* View */,
 				78B680CB22EB7C4400347C34 /* Extensions */,
 				788A560822EB6A600009E2F7 /* Model */,
 				7800936F22EA4895003857DD /* Presenter */,
@@ -155,6 +175,31 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		783F5E5122EB9D4B00ECCDE9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				783F5E5222EB9D5900ECCDE9 /* LoadingView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		783F5E5222EB9D5900ECCDE9 /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				783F5E5322EB9D6400ECCDE9 /* LoadingView.swift */,
+				783F5E5522EB9DE700ECCDE9 /* LoadingView.xib */,
+			);
+			path = LoadingView;
+			sourceTree = "<group>";
+		};
+		783F5E5722EB9FE800ECCDE9 /* Lotties */ = {
+			isa = PBXGroup;
+			children = (
+				783F5E5822EBA0E100ECCDE9 /* loading.json */,
+			);
+			path = Lotties;
+			sourceTree = "<group>";
+		};
 		7882DA1022EB7643007632BE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,7 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				78B680CC22EB7C5800347C34 /* SwiftyBeaver.swift */,
-				783F5E4922EB9A3000ECCDE9 /* ViewController+LoadingView.swift */,
+				783F5E4922EB9A3000ECCDE9 /* UIViewController+LoadingView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -243,8 +288,10 @@
 			files = (
 				7800936B22EA43CB003857DD /* closeness in Resources */,
 				7800935F22EA427B003857DD /* LaunchScreen.storyboard in Resources */,
+				783F5E5922EBA0E200ECCDE9 /* loading.json in Resources */,
 				7800935C22EA427B003857DD /* Assets.xcassets in Resources */,
 				7800935A22EA4278003857DD /* Main.storyboard in Resources */,
+				783F5E5622EB9DE700ECCDE9 /* LoadingView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,9 +302,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				783F5E4A22EB9A3000ECCDE9 /* ViewController+LoadingView.swift in Sources */,
+				783F5E4A22EB9A3000ECCDE9 /* UIViewController+LoadingView.swift in Sources */,
 				788A560A22EB6A740009E2F7 /* Meme.swift in Sources */,
 				78B680CD22EB7C5800347C34 /* SwiftyBeaver.swift in Sources */,
+				783F5E5422EB9D6400ECCDE9 /* LoadingView.swift in Sources */,
 				7882DA1722EB7687007632BE /* MemeService.swift in Sources */,
 				7800935722EA4278003857DD /* ViewController.swift in Sources */,
 				78B680CA22EB775A00347C34 /* MemeServiceProtocol.swift in Sources */,

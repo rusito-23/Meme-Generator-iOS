@@ -35,19 +35,20 @@ extension MemeServiceImpl: MemeService {
         
         Alamofire.request(url)
             .responseData { [weak self] (response: DataResponse<Data>) in
-                // TODO: LOG
-                
                 guard let `self` = self else { return }
                 
                 guard response.error == nil,
                     let data = response.data else {
-                    completion(nil)
-                    return
+                        logger.error("Request gave error/no data")
+                        completion(nil)
+                        return
                 }
                 
                 do {
+                    logger.info("Request successfull")
                     completion(try self.jsonDecoder.decode(GetMemesResponse.self, from: data))
                 } catch {
+                    logger.info("Parse error")
                     completion(nil)
                 }
         }
