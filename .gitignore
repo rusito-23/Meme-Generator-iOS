@@ -29,3 +29,6 @@ DerivedData/
 !*.xcworkspace/contents.xcworkspacedata
 /*.gcno
 
+
+# CARTHAGE
+Carthage/
