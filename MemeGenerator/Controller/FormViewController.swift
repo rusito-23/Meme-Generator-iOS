@@ -24,13 +24,29 @@ class FormViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // setup ui
+        setupPreview()
+        
         // presenter config
         self.presenter = FormPresenter()
         self.presenter?.formController = self
         self.presenter?.showTemplateForm()
     }
     
+    func setupPreview() {
+    }
+    
 }
 
 
-
+extension FormViewController {
+    
+    func setTemplatePreview(_ image: UIImage) {
+        self.previewImage.image = image
+    }
+    
+    func templatePreviewError() {
+        logger.error("TODO: set real error indicators mother fucker")
+    }
+    
+}

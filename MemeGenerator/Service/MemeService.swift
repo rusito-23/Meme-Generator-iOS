@@ -7,7 +7,9 @@
 //
 
 import Foundation
+import UIKit
 import Alamofire
+import AlamofireImage
 
 // MARK: Base class
 
@@ -26,6 +28,20 @@ class MemeServiceImpl {
 // MARK: Protocol Implementation
 
 extension MemeServiceImpl: MemeService {
+    
+    func getMemeTemplatePreview(with urlString: String, _ completion: @escaping (UIImage?) -> Void) {
+        guard let url = URL(string: urlString) else {
+            return
+        }
+        
+        Alamofire.request(url, method: .get).responseImage { response in
+            guard let image = response.result.value else {
+                completion(nil)
+                return
+            }
+            completion(image)
+        }
+    }
 
     func getMemeTemplates(_ completion: @escaping (GetMemesResponse?) -> Void) {
         

@@ -26,6 +26,8 @@
 		784BA82022EDE31D0010239C /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784BA81F22EDE31D0010239C /* XibView.swift */; };
 		784BA82222EDE3870010239C /* TemplateFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784BA82122EDE3870010239C /* TemplateFormView.swift */; };
 		784BA82422EDE3AA0010239C /* TemplateFormView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 784BA82322EDE3AA0010239C /* TemplateFormView.xib */; };
+		784BA82622EE41E50010239C /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 784BA82522EE41E50010239C /* AlamofireImage.framework */; };
+		784BA82722EE41E50010239C /* AlamofireImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 784BA82522EE41E50010239C /* AlamofireImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7882DA1222EB7643007632BE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7882DA1122EB7643007632BE /* Alamofire.framework */; };
 		7882DA1422EB7648007632BE /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7882DA1122EB7643007632BE /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7882DA1722EB7687007632BE /* MemeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7882DA1622EB7687007632BE /* MemeService.swift */; };
@@ -46,6 +48,7 @@
 				7882DA1422EB7648007632BE /* Alamofire.framework in Embed Frameworks */,
 				783F5E5022EB9C9C00ECCDE9 /* SwiftyBeaver.framework in Embed Frameworks */,
 				783F5E4D22EB9C7200ECCDE9 /* Lottie.framework in Embed Frameworks */,
+				784BA82722EE41E50010239C /* AlamofireImage.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,6 +75,7 @@
 		784BA81F22EDE31D0010239C /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
 		784BA82122EDE3870010239C /* TemplateFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateFormView.swift; sourceTree = "<group>"; };
 		784BA82322EDE3AA0010239C /* TemplateFormView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TemplateFormView.xib; sourceTree = "<group>"; };
+		784BA82522EE41E50010239C /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 		7882DA1122EB7643007632BE /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		7882DA1622EB7687007632BE /* MemeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeService.swift; sourceTree = "<group>"; };
 		788A560922EB6A740009E2F7 /* MemeTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeTemplate.swift; sourceTree = "<group>"; };
@@ -89,6 +93,7 @@
 				7882DA1222EB7643007632BE /* Alamofire.framework in Frameworks */,
 				783F5E4F22EB9C9C00ECCDE9 /* SwiftyBeaver.framework in Frameworks */,
 				783F5E4C22EB9C7200ECCDE9 /* Lottie.framework in Frameworks */,
+				784BA82622EE41E50010239C /* AlamofireImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +103,7 @@
 		7800934822EA4278003857DD = {
 			isa = PBXGroup;
 			children = (
+				784BA82522EE41E50010239C /* AlamofireImage.framework */,
 				783F5E4E22EB9C9C00ECCDE9 /* SwiftyBeaver.framework */,
 				783F5E4B22EB9C7200ECCDE9 /* Lottie.framework */,
 				7800935322EA4278003857DD /* MemeGenerator */,

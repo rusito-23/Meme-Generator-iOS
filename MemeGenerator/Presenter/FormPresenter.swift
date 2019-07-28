@@ -37,6 +37,26 @@ extension FormPresenter {
             self.templateForm?.setupWithSuperView(formView)
         }
     }
+    
+    func templateSelected(_ memeTemplate: MemeTemplate) {
+        guard let imageURI =  memeTemplate.imageURI else { return }
+        
+        DispatchQueue.global(qos: .background) .async { [weak self] in
+            guard let `self` = self else { return }
+            
+            self.memeService?.getMemeTemplatePreview(with: imageURI) { [weak self] (image) in
+                guard let `self` = self else { return }
+                
+                DispatchQueue.main.async { [weak self] in
+                    if image != nil {
+                        self?.formController?.setTemplatePreview(image!)
+                    } else {
+                        self?.formController?.templatePreviewError()
+                    }
+                }
+            }
+        }
+    }
 
 }
 
@@ -52,14 +72,14 @@ extension FormPresenter {
                 guard let res = response,
                     response?.success ?? false,
                     let templates = res.data?.memes else {
-                        DispatchQueue.main.async {
-                            self.templateForm?.onTemplatesError()
+                        DispatchQueue.main.async { [weak self] in
+                            self?.templateForm?.onTemplatesError()
                         }
                         return
                 }
                 
-                DispatchQueue.main.async {
-                    self.templateForm?.onTemplatesFound(templates)
+                DispatchQueue.main.async { [weak self] in
+                    self?.templateForm?.onTemplatesFound(templates)
                 }
             }
         }

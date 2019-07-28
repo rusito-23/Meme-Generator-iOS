@@ -70,9 +70,12 @@ extension TemplateFormView: UIPickerViewDataSource, UIPickerViewDelegate {
     }
     
     func pickerView( _ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        templateSelected.text = templates?[row].name ?? "empty"
+        guard let template = templates?[row] else { return }
+        
+        templateSelected.text = template.name
         self.endEditing(true)
-        // TODO: call presenter to make next form
+        
+        self.presenter?.templateSelected(template)
     }
-    
+
 }
