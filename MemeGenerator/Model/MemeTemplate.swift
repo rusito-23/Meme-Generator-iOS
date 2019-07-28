@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Meme: Codable {
+struct MemeTemplate: Codable {
     
     // MARK: Variables
     var id: String?

@@ -14,5 +14,5 @@ struct GetMemesResponse: Codable {
 }
 
 struct GetMemesResponseData: Codable {
-    var memes: [Meme]?
+    var memes: [MemeTemplate]?
 }

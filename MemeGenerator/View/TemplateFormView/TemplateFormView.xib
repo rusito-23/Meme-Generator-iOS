@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TemplateFormView" customModule="MemeGenerator" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="upR-Qd-DtY"/>
+                <outlet property="templateSelected" destination="07P-J5-MNv" id="CVy-hs-XkK"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="230"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Choose your template!" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="07P-J5-MNv">
+                    <rect key="frame" x="8" y="16" width="359" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Sjg-cQ-OU0"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNZ-Tb-d8u">
+                    <rect key="frame" x="8" y="82" width="359" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="s1o-zs-CDe"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="Continue"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="CNZ-Tb-d8u" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="Jlm-OS-mwz"/>
+                <constraint firstItem="CNZ-Tb-d8u" firstAttribute="top" secondItem="07P-J5-MNv" secondAttribute="bottom" constant="16" id="R2x-Q3-m1h"/>
+                <constraint firstItem="07P-J5-MNv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="SaB-ed-Tik"/>
+                <constraint firstItem="07P-J5-MNv" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="U0o-UB-b6c"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="CNZ-Tb-d8u" secondAttribute="trailing" constant="8" id="b2f-y1-7oP"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="07P-J5-MNv" secondAttribute="trailing" constant="8" id="gAe-OP-8bd"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="61.600000000000001" y="-93.103448275862078"/>
+        </view>
+    </objects>
+</document>
