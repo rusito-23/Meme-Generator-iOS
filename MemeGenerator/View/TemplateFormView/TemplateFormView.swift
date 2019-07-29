@@ -13,12 +13,16 @@ import UIKit
 @IBDesignable class TemplateFormView: XibView {
     
     // MARK: Clean variables
+    
     var presenter: FormPresenter?
     var templates: [MemeTemplate]?
     
     // MARK: IBOutlets
+    
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var templateSelected: UITextField!
+    
+    // MARK: Lifecycle
     
     override func customConfig() {
         // template picker config
@@ -32,8 +36,11 @@ import UIKit
         super.setupWithSuperView(superView)
         
         // templates initalization
-        // TODO: loading view
         presenter?.findTemplates()
+    }
+    
+    @IBAction func onContinue(_ sender: Any) {
+        self.presenter?.showBlocksForm()
     }
     
 }

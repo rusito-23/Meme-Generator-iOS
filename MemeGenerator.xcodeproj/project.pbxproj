@@ -34,6 +34,10 @@
 		788A560A22EB6A740009E2F7 /* MemeTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788A560922EB6A740009E2F7 /* MemeTemplate.swift */; };
 		788A560C22EB6B700009E2F7 /* HTTPCaptionImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788A560B22EB6B700009E2F7 /* HTTPCaptionImage.swift */; };
 		788A560E22EB6D700009E2F7 /* HTTPGetMemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788A560D22EB6D700009E2F7 /* HTTPGetMemes.swift */; };
+		78A4373722EF8C9300F84429 /* BoxFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A4373622EF8C9300F84429 /* BoxFormView.swift */; };
+		78A4373922EF8CDB00F84429 /* BoxFormView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78A4373822EF8CDB00F84429 /* BoxFormView.xib */; };
+		78A4373B22EF8DBD00F84429 /* BoxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A4373A22EF8DBD00F84429 /* BoxCell.swift */; };
+		78A4373E22EF922200F84429 /* BoxCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78A4373D22EF922200F84429 /* BoxCell.xib */; };
 		78B680CA22EB775A00347C34 /* MemeServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B680C922EB775A00347C34 /* MemeServiceProtocol.swift */; };
 		78B680CD22EB7C5800347C34 /* SwiftyBeaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B680CC22EB7C5800347C34 /* SwiftyBeaver.swift */; };
 /* End PBXBuildFile section */
@@ -81,6 +85,10 @@
 		788A560922EB6A740009E2F7 /* MemeTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeTemplate.swift; sourceTree = "<group>"; };
 		788A560B22EB6B700009E2F7 /* HTTPCaptionImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPCaptionImage.swift; sourceTree = "<group>"; };
 		788A560D22EB6D700009E2F7 /* HTTPGetMemes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPGetMemes.swift; sourceTree = "<group>"; };
+		78A4373622EF8C9300F84429 /* BoxFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxFormView.swift; sourceTree = "<group>"; };
+		78A4373822EF8CDB00F84429 /* BoxFormView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoxFormView.xib; sourceTree = "<group>"; };
+		78A4373A22EF8DBD00F84429 /* BoxCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxCell.swift; sourceTree = "<group>"; };
+		78A4373D22EF922200F84429 /* BoxCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoxCell.xib; sourceTree = "<group>"; };
 		78B680C922EB775A00347C34 /* MemeServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeServiceProtocol.swift; sourceTree = "<group>"; };
 		78B680CC22EB7C5800347C34 /* SwiftyBeaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyBeaver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -185,6 +193,7 @@
 		783F5E5122EB9D4B00ECCDE9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				78A4373522EF8C4E00F84429 /* BoxFormView */,
 				784BA81F22EDE31D0010239C /* XibView.swift */,
 				784BA81E22EDE3020010239C /* TemplateFormView */,
 				783F5E5222EB9D5900ECCDE9 /* LoadingView */,
@@ -242,6 +251,25 @@
 				788A560D22EB6D700009E2F7 /* HTTPGetMemes.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		78A4373522EF8C4E00F84429 /* BoxFormView */ = {
+			isa = PBXGroup;
+			children = (
+				78A4373C22EF921500F84429 /* BoxCell */,
+				78A4373622EF8C9300F84429 /* BoxFormView.swift */,
+				78A4373822EF8CDB00F84429 /* BoxFormView.xib */,
+			);
+			path = BoxFormView;
+			sourceTree = "<group>";
+		};
+		78A4373C22EF921500F84429 /* BoxCell */ = {
+			isa = PBXGroup;
+			children = (
+				78A4373A22EF8DBD00F84429 /* BoxCell.swift */,
+				78A4373D22EF922200F84429 /* BoxCell.xib */,
+			);
+			path = BoxCell;
 			sourceTree = "<group>";
 		};
 		78B680CB22EB7C4400347C34 /* Extensions */ = {
@@ -312,7 +340,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78A4373922EF8CDB00F84429 /* BoxFormView.xib in Resources */,
 				7800936B22EA43CB003857DD /* closeness in Resources */,
+				78A4373E22EF922200F84429 /* BoxCell.xib in Resources */,
 				7800935F22EA427B003857DD /* LaunchScreen.storyboard in Resources */,
 				783F5E5922EBA0E200ECCDE9 /* loading.json in Resources */,
 				7800935C22EA427B003857DD /* Assets.xcassets in Resources */,
@@ -330,6 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				783F5E4A22EB9A3000ECCDE9 /* UIViewController+LoadingView.swift in Sources */,
+				78A4373B22EF8DBD00F84429 /* BoxCell.swift in Sources */,
 				788A560A22EB6A740009E2F7 /* MemeTemplate.swift in Sources */,
 				784BA81D22ED38350010239C /* FormPresenter.swift in Sources */,
 				78B680CD22EB7C5800347C34 /* SwiftyBeaver.swift in Sources */,
@@ -341,6 +372,7 @@
 				7800935522EA4278003857DD /* AppDelegate.swift in Sources */,
 				784BA82022EDE31D0010239C /* XibView.swift in Sources */,
 				7800936D22EA47CB003857DD /* FormViewController.swift in Sources */,
+				78A4373722EF8C9300F84429 /* BoxFormView.swift in Sources */,
 				788A560C22EB6B700009E2F7 /* HTTPCaptionImage.swift in Sources */,
 				788A560E22EB6D700009E2F7 /* HTTPGetMemes.swift in Sources */,
 			);

@@ -13,10 +13,15 @@ import Foundation
 class FormPresenter {
     
     // MARK: Clean
+    
     weak var formController: FormViewController?
     var templateForm: TemplateFormView?
+    var blocksForm: BoxFormView?
+    
+    var selected: MemeTemplate?
     
     // MARK: Services
+    
     var memeService: MemeService?
 
     init() {
@@ -38,9 +43,31 @@ extension FormPresenter {
         }
     }
     
+    func showBlocksForm() {
+        
+        guard let selectedTemplate = self.selected else {
+            // TODO: show warning message?
+            return
+        }
+        
+        self.templateForm?.removeFromSuperview()
+        self.templateForm = nil
+        
+        self.blocksForm = BoxFormView()
+        self.blocksForm?.selected = selectedTemplate
+        
+        if let formView = self.formController?.formView {
+            self.blocksForm?.setupWithSuperView(formView)
+        }
+    }
+    
     func templateSelected(_ memeTemplate: MemeTemplate) {
+        
+        self.selected = memeTemplate
+        
         guard let imageURI =  memeTemplate.imageURI else { return }
         
+        self.formController?.showLoading()
         DispatchQueue.global(qos: .background) .async { [weak self] in
             guard let `self` = self else { return }
             
@@ -48,6 +75,7 @@ extension FormPresenter {
                 guard let `self` = self else { return }
                 
                 DispatchQueue.main.async { [weak self] in
+                    self?.formController?.hideLoading()
                     if image != nil {
                         self?.formController?.setTemplatePreview(image!)
                     } else {
@@ -57,7 +85,7 @@ extension FormPresenter {
             }
         }
     }
-
+    
 }
 
 // MARK: Service methods
@@ -65,6 +93,7 @@ extension FormPresenter {
 extension FormPresenter {
     
     func findTemplates() {
+        self.formController?.showLoading()
         DispatchQueue.global(qos: .background).async {
             self.memeService?.getMemeTemplates { [weak self] (response) in
                 guard let `self` = self else { return }
@@ -73,12 +102,14 @@ extension FormPresenter {
                     response?.success ?? false,
                     let templates = res.data?.memes else {
                         DispatchQueue.main.async { [weak self] in
+                            self?.formController?.hideLoading()
                             self?.templateForm?.onTemplatesError()
                         }
                         return
                 }
                 
                 DispatchQueue.main.async { [weak self] in
+                    self?.formController?.hideLoading()
                     self?.templateForm?.onTemplatesFound(templates)
                 }
             }

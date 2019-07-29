@@ -41,6 +41,7 @@ class XibView: UIView {
     
     func setupWithSuperView(_ superView: UIView) {
         self.autoresizesSubviews = false
+        self.clipsToBounds = true
         superView.addSubview(self)
         self.frame = superView.bounds
     }
