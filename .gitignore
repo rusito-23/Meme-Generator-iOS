@@ -32,3 +32,6 @@ DerivedData/
 
 # CARTHAGE
 Carthage/
+
+# PERSONALS
+MemeGenerator/SupportFiles/APICredentials.plist

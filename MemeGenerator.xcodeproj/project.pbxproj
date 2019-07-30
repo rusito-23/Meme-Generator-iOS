@@ -14,6 +14,8 @@
 		7800935F22EA427B003857DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7800935D22EA427B003857DD /* LaunchScreen.storyboard */; };
 		7800936B22EA43CB003857DD /* closeness in Resources */ = {isa = PBXBuildFile; fileRef = 7800936A22EA43CB003857DD /* closeness */; };
 		7800936D22EA47CB003857DD /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7800936C22EA47CB003857DD /* FormViewController.swift */; };
+		78078BB122F0DE760070AE67 /* APICredentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78078BB022F0DE760070AE67 /* APICredentials.plist */; };
+		78078BB322F0E64C0070AE67 /* URL+appending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78078BB222F0E64C0070AE67 /* URL+appending.swift */; };
 		783F5E4A22EB9A3000ECCDE9 /* UIViewController+LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783F5E4922EB9A3000ECCDE9 /* UIViewController+LoadingView.swift */; };
 		783F5E4C22EB9C7200ECCDE9 /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 783F5E4B22EB9C7200ECCDE9 /* Lottie.framework */; };
 		783F5E4D22EB9C7200ECCDE9 /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 783F5E4B22EB9C7200ECCDE9 /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -69,6 +71,8 @@
 		7800936022EA427B003857DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7800936A22EA43CB003857DD /* closeness */ = {isa = PBXFileReference; lastKnownFileType = folder; path = closeness; sourceTree = "<group>"; };
 		7800936C22EA47CB003857DD /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
+		78078BB022F0DE760070AE67 /* APICredentials.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APICredentials.plist; sourceTree = "<group>"; };
+		78078BB222F0E64C0070AE67 /* URL+appending.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+appending.swift"; sourceTree = "<group>"; };
 		783F5E4922EB9A3000ECCDE9 /* UIViewController+LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+LoadingView.swift"; sourceTree = "<group>"; };
 		783F5E4B22EB9C7200ECCDE9 /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
 		783F5E4E22EB9C9C00ECCDE9 /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 			children = (
 				7800935B22EA427B003857DD /* Assets.xcassets */,
 				7800935422EA4278003857DD /* AppDelegate.swift */,
+				78078BB022F0DE760070AE67 /* APICredentials.plist */,
 			);
 			path = SupportFiles;
 			sourceTree = "<group>";
@@ -277,6 +282,7 @@
 			children = (
 				78B680CC22EB7C5800347C34 /* SwiftyBeaver.swift */,
 				783F5E4922EB9A3000ECCDE9 /* UIViewController+LoadingView.swift */,
+				78078BB222F0E64C0070AE67 /* URL+appending.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -348,6 +354,7 @@
 				7800935C22EA427B003857DD /* Assets.xcassets in Resources */,
 				7800935A22EA4278003857DD /* Main.storyboard in Resources */,
 				783F5E5622EB9DE700ECCDE9 /* LoadingView.xib in Resources */,
+				78078BB122F0DE760070AE67 /* APICredentials.plist in Resources */,
 				784BA82422EDE3AA0010239C /* TemplateFormView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,6 +379,7 @@
 				7800935522EA4278003857DD /* AppDelegate.swift in Sources */,
 				784BA82022EDE31D0010239C /* XibView.swift in Sources */,
 				7800936D22EA47CB003857DD /* FormViewController.swift in Sources */,
+				78078BB322F0E64C0070AE67 /* URL+appending.swift in Sources */,
 				78A4373722EF8C9300F84429 /* BoxFormView.swift in Sources */,
 				788A560C22EB6B700009E2F7 /* HTTPCaptionImage.swift in Sources */,
 				788A560E22EB6D700009E2F7 /* HTTPGetMemes.swift in Sources */,

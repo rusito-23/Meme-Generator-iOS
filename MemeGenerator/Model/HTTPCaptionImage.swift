@@ -10,24 +10,33 @@ import Foundation
 
 // MARK: Request
 
-struct CaptionImageRequest: Codable {
+struct CaptionImageRequest {
     
     // MARK: Variables
     var templateId: String?
-    var username: String?
-    var password: String?
-    var text0: String?
-    var text1: String?
-    
-    // MARK: Keys
-    private enum CodingKeys : String, CodingKey {
-        case templateId = "template_id",
-            username,
-            password,
-            text0,
-            text1
+    var boxes: [String]?
+    var username: String? {
+        get {
+            guard let path = Bundle.main.path(forResource: "APICredentials", ofType: "plist") else {
+                logger.error("APICredentials.plist required!")
+                fatalError()
+            }
+            
+            let dict = NSDictionary(contentsOfFile: path)
+            return dict?["username"] as? String
+        }
     }
-
+    var password: String? {
+        get {
+            guard let path = Bundle.main.path(forResource: "APICredentials", ofType: "plist") else {
+                logger.error("APICredentials.plist required!")
+                fatalError()
+            }
+            
+            let dict = NSDictionary(contentsOfFile: path)
+            return dict?["pass"] as? String
+        }
+    }
 }
 
 // MARK: Response
@@ -48,6 +57,7 @@ struct CaptionImageResponseData: Codable {
     
     // MARK: Keys
     private enum CodingKeys : String, CodingKey {
-        case url, pageUrl = "page_url"
+        case url
+        case pageUrl = "page_url"
     }
 }

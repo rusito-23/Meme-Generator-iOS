@@ -18,23 +18,23 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N4e-GX-62d">
-                        <rect key="frame" x="16" y="11" width="343" height="22"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Text Box 0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7yA-ch-Etm">
+                        <rect key="frame" x="8" y="8" width="359" height="27.5"/>
                         <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="N4e-GX-62d" firstAttribute="leading" secondItem="rId-bz-mU9" secondAttribute="leadingMargin" id="6Vp-dy-HqW"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="N4e-GX-62d" secondAttribute="bottom" id="Dwy-PK-PJL"/>
-                    <constraint firstItem="N4e-GX-62d" firstAttribute="top" secondItem="rId-bz-mU9" secondAttribute="topMargin" id="Wxv-ch-SzV"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="N4e-GX-62d" secondAttribute="trailing" id="zG1-ue-ZZF"/>
+                    <constraint firstAttribute="bottom" secondItem="7yA-ch-Etm" secondAttribute="bottom" constant="8" id="4Hc-nz-dnm"/>
+                    <constraint firstItem="7yA-ch-Etm" firstAttribute="leading" secondItem="rId-bz-mU9" secondAttribute="leading" constant="8" id="O7s-pX-QFG"/>
+                    <constraint firstAttribute="trailing" secondItem="7yA-ch-Etm" secondAttribute="trailing" constant="8" id="cEV-LA-Dps"/>
+                    <constraint firstItem="7yA-ch-Etm" firstAttribute="top" secondItem="rId-bz-mU9" secondAttribute="top" constant="8" id="mn4-Ot-6Wz"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
-                <outlet property="boxLabel" destination="N4e-GX-62d" id="TXk-A8-bCC"/>
+                <outlet property="textBoxField" destination="7yA-ch-Etm" id="Jle-AN-9j5"/>
             </connections>
             <point key="canvasLocation" x="88" y="352"/>
         </tableViewCell>

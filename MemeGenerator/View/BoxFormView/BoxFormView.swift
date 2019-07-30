@@ -55,7 +55,7 @@ extension BoxFormView: UITableViewDataSource {
             fatalError()
         }
         
-        cell.boxLabel?.text = self.boxes[indexPath.row]
+        cell.textBoxField?.text = self.boxes[indexPath.row]
         
         return cell
     }

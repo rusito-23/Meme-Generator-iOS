@@ -20,6 +20,7 @@ class MemeServiceImpl {
     private let memesURL = "https://api.imgflip.com/get_memes"
     private let captionURL = "https://api.imgflip.com/caption_image"
     
+    
     private let jsonDecoder = JSONDecoder()
     private let jsonEncoder = JSONEncoder()
     
@@ -71,7 +72,47 @@ extension MemeServiceImpl: MemeService {
         
     }
     
-    func getMemeCaption(_ request: CaptionImageRequest, _ completion: @escaping (CaptionImageResponse?) -> Void) {
+    func getMemeCaption(_ request: CaptionImageRequest, _ completion: @escaping (UIImage?) -> Void) {
+        
+        guard var url = URL(string: captionURL)?
+            .appending("username", value: request.username)
+            .appending("password", value: request.password)
+            .appending("template_id", value: request.templateId),
+            let boxesEnum = request.boxes?.enumerated() else {
+            return
+        }
+
+        for (index, box) in boxesEnum {
+            url = url.appending("boxes[\(index)][text]", value: box)
+        }
+        
+        Alamofire.request(url)
+            .responseData { [weak self] (response) in
+                guard let `self` = self else { return }
+                
+                guard response.error == nil,
+                    let data = response.data else {
+                        logger.error("Request gave error/no data")
+                        completion(nil)
+                        return
+                }
+                
+                guard let res = try? self.jsonDecoder.decode(CaptionImageResponse.self, from: data),
+                    let pageURL = res.data?.pageUrl,
+                    let imageURI = URL(string: pageURL) else {
+                    logger.error("Unable to parse response!")
+                    completion(nil)
+                }
+                
+                Alamofire.request(imageURI)
+                    .responseImage { response in
+                        guard let image = response.result.value else {
+                            completion(nil)
+                            return
+                        }
+                        completion(image)
+                }
+        }
     }
-    
+
 }

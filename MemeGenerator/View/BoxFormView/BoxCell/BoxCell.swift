@@ -12,6 +12,6 @@ import UIKit
 
 class BoxCell: UITableViewCell {
     
-    @IBOutlet weak var boxLabel: UILabel!
+    @IBOutlet weak var textBoxField: UITextField!
     
 }
