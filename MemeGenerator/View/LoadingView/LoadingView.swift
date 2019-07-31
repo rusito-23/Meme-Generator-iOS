@@ -58,7 +58,7 @@ class LoadingView: UIView {
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         
-        contentView.backgroundColor = UIColor.white.withAlphaComponent(0.8)
+        contentView.backgroundColor = UIColor.black.withAlphaComponent(0.5)
     }
     
     private func loadAnimation() {
