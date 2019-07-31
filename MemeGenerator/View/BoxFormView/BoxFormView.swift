@@ -32,10 +32,12 @@ class BoxFormView: XibView {
     override func setupWithSuperView(_ superView: UIView) {
         super.setupWithSuperView(superView)
         
-        for i in 0...(selected?.boxCount ?? 0) {
-            self.boxes.append(defaultText(for: i))
+        if let count = selected?.boxCount {
+            for i in 0...(count - 1) {
+                self.boxes.append(defaultText(for: i))
+            }
         }
-        
+
         self.presenter?.previewTemplate()
     }
 
@@ -58,6 +60,7 @@ extension BoxFormView: UITableViewDataSource {
         
         cell.textBoxField?.delegate = self
         cell.textBoxField?.tag = indexPath.row
+        cell.textBoxField?.placeholder = defaultText(for: indexPath.row)
         
         return cell
     }
