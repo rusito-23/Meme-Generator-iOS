@@ -18,6 +18,7 @@ class BoxFormView: XibView {
     
     // MARK: Boxes
     
+    @IBOutlet weak var templateTitleView: UILabel!
     @IBOutlet weak var boxTables: UITableView!
     var boxes: [String] = []
 
@@ -39,6 +40,7 @@ class BoxFormView: XibView {
         }
 
         setupKeyBoardObservers()
+        self.templateTitleView.text = selected?.name
         self.presenter?.previewTemplate()
     }
 
