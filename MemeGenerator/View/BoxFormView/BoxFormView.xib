@@ -21,26 +21,16 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nZM-Q0-Fae">
-                    <rect key="frame" x="0.0" y="20" width="375" height="593"/>
+                    <rect key="frame" x="0.0" y="20" width="375" height="633"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGV-Qb-exS">
-                    <rect key="frame" x="0.0" y="613" width="375" height="40"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="40" id="9XO-AV-JB1"/>
-                    </constraints>
-                    <state key="normal" title="Button"/>
-                </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="nZM-Q0-Fae" secondAttribute="trailing" id="1Aq-cB-mnp"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="eGV-Qb-exS" secondAttribute="bottom" id="Ems-QI-NVm"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="eGV-Qb-exS" secondAttribute="trailing" id="OWx-et-Dhg"/>
                 <constraint firstItem="nZM-Q0-Fae" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="QCb-rW-pOh"/>
                 <constraint firstItem="nZM-Q0-Fae" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="c1f-yP-4eY"/>
-                <constraint firstItem="eGV-Qb-exS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="kbg-HA-7S8"/>
-                <constraint firstItem="eGV-Qb-exS" firstAttribute="top" secondItem="nZM-Q0-Fae" secondAttribute="bottom" id="svu-KK-OzD"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="nZM-Q0-Fae" secondAttribute="bottom" id="rPd-7d-a1w"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

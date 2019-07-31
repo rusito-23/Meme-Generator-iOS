@@ -33,7 +33,7 @@ class BoxFormView: XibView {
         super.setupWithSuperView(superView)
         
         for i in 0...(selected?.boxCount ?? 0) {
-            self.boxes.append("TEXT BOX: \(i)")
+            self.boxes.append(defaultText(for: i))
         }
         
         self.presenter?.previewTemplate()
@@ -74,9 +74,19 @@ extension BoxFormView: UITextFieldDelegate {
     }
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        boxes[textField.tag] = textField.text ?? "TEXT BOX: \(textField.tag)"
+        boxes[textField.tag] = textField.text ?? defaultText(for: textField.tag)
         self.presenter?.previewTemplate()
         return true
+    }
+    
+}
+
+// MARK: Helpers
+
+extension BoxFormView {
+    
+    private func defaultText(for index: Int) -> String {
+        return "TextBox -> \(index)"
     }
     
 }
