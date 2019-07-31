@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 // MARK: Setup
 
@@ -59,6 +60,24 @@ extension FormPresenter {
         
         if let formView = self.formController?.formView {
             self.boxesForm?.setupWithSuperView(formView)
+        }
+    }
+    
+    @objc func keyBoardWillShow(notification: NSNotification) {
+        guard let userInfo = notification.userInfo else { return }
+        guard let keyBoardSize = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
+        guard let form = formController else { return }
+        let keyBoardFrame = keyBoardSize.cgRectValue
+        
+        if form.view.frame.origin.y == 0 {
+            form.view.frame.origin.y -= keyBoardFrame.height
+        }
+    }
+    
+    @objc func keyBoardWillHide(notification: NSNotification) {
+        guard let form = formController else { return }
+        if form.view.frame.origin.y != 0 {
+            form.view.frame.origin.y = 0
         }
     }
     

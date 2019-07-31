@@ -38,6 +38,7 @@ class BoxFormView: XibView {
             }
         }
 
+        setupKeyBoardObservers()
         self.presenter?.previewTemplate()
     }
 
@@ -67,10 +68,26 @@ extension BoxFormView: UITableViewDataSource {
     
 }
 
-// MARK: UITextField Delegate methods
+// MARK: UITextFieldDelegate and Keyboard methods
 
 extension BoxFormView: UITextFieldDelegate {
     
+    func setupKeyBoardObservers() {
+        let center = NotificationCenter.default
+        center.addObserver(self, selector: #selector(keyBoardWillShow),
+                           name: UIResponder.keyboardWillShowNotification, object: nil)
+        center.addObserver(self, selector: #selector(keyBoardWillHide),
+                           name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyBoardWillShow(notification: NSNotification) {
+        self.presenter?.keyBoardWillShow(notification: notification)
+    }
+    
+    @objc func keyBoardWillHide(notification: NSNotification) {
+        self.presenter?.keyBoardWillHide(notification: notification)
+    }
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
