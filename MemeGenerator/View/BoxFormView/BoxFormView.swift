@@ -77,7 +77,9 @@ extension BoxFormView: UITextFieldDelegate {
     }
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        boxes[textField.tag] = textField.text ?? defaultText(for: textField.tag)
+        let textBox = (textField.text?.isEmpty ?? false) ? defaultText(for: textField.tag) : textField.text!
+        boxes[textField.tag] = textBox
+        
         self.presenter?.previewTemplate()
         return true
     }
@@ -89,7 +91,7 @@ extension BoxFormView: UITextFieldDelegate {
 extension BoxFormView {
     
     private func defaultText(for index: Int) -> String {
-        return "TextBox -> \(index)"
+        return "TextBox \(index)"
     }
     
 }

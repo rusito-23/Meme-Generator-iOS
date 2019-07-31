@@ -25,4 +25,8 @@ extension UIViewController {
         }
     }
     
+    var supportedInterfaceOrientations : UIInterfaceOrientationMask {
+        get { return .portrait }
+    }
+    
 }

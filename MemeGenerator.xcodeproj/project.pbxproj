@@ -16,7 +16,7 @@
 		7800936D22EA47CB003857DD /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7800936C22EA47CB003857DD /* FormViewController.swift */; };
 		78078BB122F0DE760070AE67 /* APICredentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78078BB022F0DE760070AE67 /* APICredentials.plist */; };
 		78078BB322F0E64C0070AE67 /* URL+appending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78078BB222F0E64C0070AE67 /* URL+appending.swift */; };
-		783F5E4A22EB9A3000ECCDE9 /* UIViewController+LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783F5E4922EB9A3000ECCDE9 /* UIViewController+LoadingView.swift */; };
+		783F5E4A22EB9A3000ECCDE9 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783F5E4922EB9A3000ECCDE9 /* UIViewController.swift */; };
 		783F5E4C22EB9C7200ECCDE9 /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 783F5E4B22EB9C7200ECCDE9 /* Lottie.framework */; };
 		783F5E4D22EB9C7200ECCDE9 /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 783F5E4B22EB9C7200ECCDE9 /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		783F5E4F22EB9C9C00ECCDE9 /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 783F5E4E22EB9C9C00ECCDE9 /* SwiftyBeaver.framework */; };
@@ -73,7 +73,7 @@
 		7800936C22EA47CB003857DD /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		78078BB022F0DE760070AE67 /* APICredentials.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APICredentials.plist; sourceTree = "<group>"; };
 		78078BB222F0E64C0070AE67 /* URL+appending.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+appending.swift"; sourceTree = "<group>"; };
-		783F5E4922EB9A3000ECCDE9 /* UIViewController+LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+LoadingView.swift"; sourceTree = "<group>"; };
+		783F5E4922EB9A3000ECCDE9 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		783F5E4B22EB9C7200ECCDE9 /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
 		783F5E4E22EB9C9C00ECCDE9 /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
 		783F5E5322EB9D6400ECCDE9 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
@@ -281,7 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				78B680CC22EB7C5800347C34 /* SwiftyBeaver.swift */,
-				783F5E4922EB9A3000ECCDE9 /* UIViewController+LoadingView.swift */,
+				783F5E4922EB9A3000ECCDE9 /* UIViewController.swift */,
 				78078BB222F0E64C0070AE67 /* URL+appending.swift */,
 			);
 			path = Extensions;
@@ -366,7 +366,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				783F5E4A22EB9A3000ECCDE9 /* UIViewController+LoadingView.swift in Sources */,
+				783F5E4A22EB9A3000ECCDE9 /* UIViewController.swift in Sources */,
 				78A4373B22EF8DBD00F84429 /* BoxCell.swift in Sources */,
 				788A560A22EB6A740009E2F7 /* MemeTemplate.swift in Sources */,
 				784BA81D22ED38350010239C /* FormPresenter.swift in Sources */,
