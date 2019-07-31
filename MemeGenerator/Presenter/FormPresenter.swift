@@ -16,7 +16,7 @@ class FormPresenter {
     
     weak var formController: FormViewController?
     var templateForm: TemplateFormView?
-    var blocksForm: BoxFormView?
+    var boxesForm: BoxFormView?
     
     var selected: MemeTemplate?
     
@@ -53,14 +53,53 @@ extension FormPresenter {
         self.templateForm?.removeFromSuperview()
         self.templateForm = nil
         
-        self.blocksForm = BoxFormView()
-        self.blocksForm?.selected = selectedTemplate
+        self.boxesForm = BoxFormView()
+        self.boxesForm?.selected = selectedTemplate
+        self.boxesForm?.presenter = self
         
         if let formView = self.formController?.formView {
-            self.blocksForm?.setupWithSuperView(formView)
+            self.boxesForm?.setupWithSuperView(formView)
         }
     }
     
+}
+
+// MARK: Service methods
+
+extension FormPresenter {
+    
+    /*
+     Send list of available templates to the the templateForm completion,
+     to be listed in the view.
+     */
+    func findTemplates() {
+        self.formController?.showLoading()
+        DispatchQueue.global(qos: .background).async {
+            self.memeService?.getMemeTemplates { [weak self] (response) in
+                guard let `self` = self else { return }
+                
+                guard let res = response,
+                    response?.success ?? false,
+                    let templates = res.data?.memes else {
+                        DispatchQueue.main.async { [weak self] in
+                            self?.formController?.hideLoading()
+                            self?.templateForm?.onTemplatesError()
+                        }
+                        return
+                }
+                
+                DispatchQueue.main.async { [weak self] in
+                    self?.formController?.hideLoading()
+                    self?.templateForm?.onTemplatesFound(templates)
+                }
+            }
+        }
+    }
+    
+    /*
+     When a template is selected, this methods loads the image
+     to preview the meme in the templateForm.
+     */
     func templateSelected(_ memeTemplate: MemeTemplate) {
         
         self.selected = memeTemplate
@@ -86,34 +125,39 @@ extension FormPresenter {
         }
     }
     
-}
-
-// MARK: Service methods
-
-extension FormPresenter {
     
-    func findTemplates() {
+    /*
+     Preview the meme, with every text block added by the user,
+     before even saving the image.
+     */
+    func previewTemplate() {
+        
+        guard let templateId = self.selected?.id,
+            let boxes = boxesForm?.boxes else {
+            // TODO: Show warning?
+            return
+        }
+        
+        let request = CaptionImageRequest(templateId: templateId, boxes: boxes)
+
         self.formController?.showLoading()
-        DispatchQueue.global(qos: .background).async {
-            self.memeService?.getMemeTemplates { [weak self] (response) in
+        DispatchQueue.global(qos: .background).async { [weak self] in
+            guard let `self` = self else { return }
+
+            self.memeService?.getMemeCaption(request) { [weak self] (image) in
                 guard let `self` = self else { return }
-                
-                guard let res = response,
-                    response?.success ?? false,
-                    let templates = res.data?.memes else {
-                        DispatchQueue.main.async { [weak self] in
-                            self?.formController?.hideLoading()
-                            self?.templateForm?.onTemplatesError()
-                        }
-                        return
-                }
                 
                 DispatchQueue.main.async { [weak self] in
                     self?.formController?.hideLoading()
-                    self?.templateForm?.onTemplatesFound(templates)
+                    if image != nil {
+                        self?.formController?.setTemplatePreview(image!)
+                    } else {
+                        self?.formController?.templatePreviewError()
+                    }
                 }
             }
         }
     }
+    
 
 }

@@ -10,8 +10,6 @@ import Foundation
 import UIKit
 
 
-class BoxCell: UITableViewCell {
-    
+class BoxCell: UITableViewCell, UITextFieldDelegate {
     @IBOutlet weak var textBoxField: UITextField!
-    
 }

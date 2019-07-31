@@ -98,10 +98,13 @@ extension MemeServiceImpl: MemeService {
                 }
                 
                 guard let res = try? self.jsonDecoder.decode(CaptionImageResponse.self, from: data),
-                    let pageURL = res.data?.pageUrl,
-                    let imageURI = URL(string: pageURL) else {
-                    logger.error("Unable to parse response!")
+                    res.success ?? false,
+                    let imageURIString = res.data?.url,
+                    let imageURI = URL(string: imageURIString) else {
+                        
+                    logger.error("Response not successfull!")
                     completion(nil)
+                    return
                 }
                 
                 Alamofire.request(imageURI)

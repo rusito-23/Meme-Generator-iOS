@@ -12,5 +12,5 @@ import UIKit
 protocol MemeService {
     func getMemeTemplates(_ completion: @escaping (GetMemesResponse?) -> Void)
     func getMemeTemplatePreview(with urlString: String, _ completion: @escaping (UIImage?) -> Void)
-    func getMemeCaption(_ request: CaptionImageRequest, _ completion: @escaping (CaptionImageResponse?) -> Void)
+    func getMemeCaption(_ request: CaptionImageRequest, _ completion: @escaping (UIImage?) -> Void)
 }

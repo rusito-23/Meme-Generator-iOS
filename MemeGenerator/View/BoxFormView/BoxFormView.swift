@@ -16,12 +16,11 @@ class BoxFormView: XibView {
     var presenter: FormPresenter?
     var selected: MemeTemplate?
     
-    var boxes: [String] = []
-    
-    // MARK: Outlets
+    // MARK: Boxes
     
     @IBOutlet weak var boxTables: UITableView!
-    
+    var boxes: [String] = []
+
     // MARK: Lifecycle
     
     override func customConfig() {
@@ -34,8 +33,10 @@ class BoxFormView: XibView {
         super.setupWithSuperView(superView)
         
         for i in 0...(selected?.boxCount ?? 0) {
-            self.boxes.append("box: \(i)")
+            self.boxes.append("TEXT BOX: \(i)")
         }
+        
+        self.presenter?.previewTemplate()
     }
 
 }
@@ -55,9 +56,27 @@ extension BoxFormView: UITableViewDataSource {
             fatalError()
         }
         
-        cell.textBoxField?.text = self.boxes[indexPath.row]
+        cell.textBoxField?.delegate = self
+        cell.textBoxField?.tag = indexPath.row
         
         return cell
+    }
+    
+}
+
+// MARK: UITextField Delegate methods
+
+extension BoxFormView: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        boxes[textField.tag] = textField.text ?? "TEXT BOX: \(textField.tag)"
+        self.presenter?.previewTemplate()
+        return true
     }
     
 }
