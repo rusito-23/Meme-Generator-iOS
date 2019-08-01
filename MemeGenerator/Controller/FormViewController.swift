@@ -23,11 +23,25 @@ class FormViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // presenter config
         self.presenter = FormPresenter()
         self.presenter?.formController = self
         self.presenter?.showTemplateForm()
+    }
+}
+
+
+// MARK: Navigation bar control
+
+extension FormViewController {
+    
+    @IBAction func backButtonPressed(_ sender: Any) {
+        self.presenter?.onBack()
+    }
+    
+    @IBAction func saveButtonPressed(_ sender: Any) {
+        // TODO: call presenter
     }
     
 }
@@ -37,10 +51,6 @@ extension FormViewController {
     
     func setTemplatePreview(_ image: UIImage) {
         self.previewImage.image = image
-    }
-    
-    func templatePreviewError() {
-        logger.error("TODO: set real error indicators mother fucker")
     }
     
 }

@@ -12,18 +12,26 @@ import UIKit
 
 extension UIViewController {
     
+    // MARK: Loading
+    
     func showLoading() {
-        let loadingView = LoadingView()
-        loadingView.setupWithSuperView(self.view)
+        self.view.showLoading()
     }
     
     func hideLoading() {
-        for view in self.view.subviews {
-            if view.isKind(of: LoadingView.self) {
-                view.removeFromSuperview()
-            }
-        }
+        self.view.hideLoading()
     }
+    
+    // MARK: Error
+    
+    func showError(with message: String) {
+        let errorView = ErrorView()
+        errorView.message = message
+        errorView.parentController = self
+        errorView.setupWithSuperView(self.view)
+    }
+    
+    // MARK: Orientation
     
     var supportedInterfaceOrientations : UIInterfaceOrientationMask {
         get { return .portrait }

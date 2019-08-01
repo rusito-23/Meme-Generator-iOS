@@ -19,8 +19,10 @@ class FormPresenter {
     var templateForm: TemplateFormView?
     var boxesForm: BoxFormView?
     
-    var selected: MemeTemplate?
+    // MARK: Vars
     
+    var selected: MemeTemplate?
+
     // MARK: Services
     
     var memeService: MemeService?
@@ -35,7 +37,19 @@ class FormPresenter {
 
 extension FormPresenter {
     
+    func onBack() {
+        if self.templateForm != nil {
+            self.formController?.dismiss(animated: true, completion: nil)
+        } else if self.boxesForm != nil {
+            hideBoxesForm()
+            showTemplateForm()
+        }
+    }
+    
     func showTemplateForm() {
+        
+        hideBoxesForm()
+        
         self.templateForm = TemplateFormView()
         self.templateForm?.presenter = self
         
@@ -44,16 +58,20 @@ extension FormPresenter {
         }
     }
     
+    func hideTemplatesForm() {
+        self.templateForm?.removeFromSuperview()
+        self.templateForm = nil
+    }
+    
     func showBlocksForm() {
         
         guard let selectedTemplate = self.selected else {
-            // TODO: show warning message?
+            self.formController?.showError(with: "Sorry! No image was selected")
             return
         }
         
-        self.templateForm?.removeFromSuperview()
-        self.templateForm = nil
-        
+        hideTemplatesForm()
+
         self.boxesForm = BoxFormView()
         self.boxesForm?.selected = selectedTemplate
         self.boxesForm?.presenter = self
@@ -61,6 +79,11 @@ extension FormPresenter {
         if let formView = self.formController?.formView {
             self.boxesForm?.setupWithSuperView(formView)
         }
+    }
+    
+    func hideBoxesForm() {
+        self.boxesForm?.removeFromSuperview()
+        self.boxesForm = nil
     }
     
     @objc func keyBoardWillShow(notification: NSNotification) {
@@ -102,7 +125,8 @@ extension FormPresenter {
                     let templates = res.data?.memes else {
                         DispatchQueue.main.async { [weak self] in
                             self?.formController?.hideLoading()
-                            self?.templateForm?.onTemplatesError()
+                            // TODO: check internet connection
+                            self?.formController?.showError(with: "No templates were found!")
                         }
                         return
                 }
@@ -125,7 +149,7 @@ extension FormPresenter {
         
         guard let imageURI =  memeTemplate.imageURI else { return }
         
-        self.formController?.showLoading()
+        self.formController?.previewImage.showLoading()
         DispatchQueue.global(qos: .background) .async { [weak self] in
             guard let `self` = self else { return }
             
@@ -133,11 +157,12 @@ extension FormPresenter {
                 guard let `self` = self else { return }
                 
                 DispatchQueue.main.async { [weak self] in
-                    self?.formController?.hideLoading()
+                    self?.formController?.previewImage.hideLoading()
                     if image != nil {
                         self?.formController?.setTemplatePreview(image!)
                     } else {
-                        self?.formController?.templatePreviewError()
+                        // TODO: check internet connection
+                        self?.formController?.showError(with: "Template couldn't be loaded!")
                     }
                 }
             }
@@ -159,7 +184,7 @@ extension FormPresenter {
         
         let request = CaptionImageRequest(templateId: templateId, boxes: boxes)
 
-        self.formController?.showLoading()
+        self.formController?.previewImage.showLoading()
         DispatchQueue.global(qos: .background).async { [weak self] in
             guard let `self` = self else { return }
 
@@ -167,11 +192,12 @@ extension FormPresenter {
                 guard let `self` = self else { return }
                 
                 DispatchQueue.main.async { [weak self] in
-                    self?.formController?.hideLoading()
+                    self?.formController?.previewImage.hideLoading()
                     if image != nil {
                         self?.formController?.setTemplatePreview(image!)
                     } else {
-                        self?.formController?.templatePreviewError()
+                        // TODO: check internet connection
+                        self?.formController?.showError(with: "Template could not be preview!")
                     }
                 }
             }

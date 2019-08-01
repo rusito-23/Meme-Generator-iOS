@@ -54,10 +54,6 @@ extension TemplateFormView {
         self.templates = templates
     }
     
-    func onTemplatesError() {
-        logger.error("Templates error!")
-    }
-    
 }
 
 // MARK: Presenter comunication
