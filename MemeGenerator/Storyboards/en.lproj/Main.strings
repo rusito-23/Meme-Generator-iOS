@@ -1,0 +1,15 @@
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "6GG-FC-Ngo"; */
+"6GG-FC-Ngo.title" = "Back";
+
+/* Class = "UIBarButtonItem"; title = "Share"; ObjectID = "Dmu-vT-nZo"; */
+"Dmu-vT-nZo.title" = "Share";
+
+/* Class = "UILabel"; text = "MEME GENERATOR"; ObjectID = "Ql1-4P-f9I"; */
+"Ql1-4P-f9I.text" = "MEME GENERATOR";
+
+/* Class = "UIButton"; normalTitle = "New!"; ObjectID = "sge-mb-Isw"; */
+"sge-mb-Isw.normalTitle" = "New meme!";
+
+/* Class = "UILabel"; text = "Create your meme!"; ObjectID = "v4S-zi-1Xh"; */
+"v4S-zi-1Xh.text" = "Create your meme!";

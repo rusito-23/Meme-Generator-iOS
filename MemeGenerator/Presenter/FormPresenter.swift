@@ -66,7 +66,7 @@ extension FormPresenter {
     func showBlocksForm() {
         
         guard let selectedTemplate = self.selected else {
-            self.formController?.showError(with: "Sorry! No image was selected")
+            self.formController?.showError(with: "ERR_NO_TEMPLATE".localized())
             return
         }
         
@@ -126,7 +126,7 @@ extension FormPresenter {
                         DispatchQueue.main.async { [weak self] in
                             self?.formController?.hideLoading()
                             // TODO: check internet connection
-                            self?.formController?.showError(with: "No templates were found!")
+                            self?.formController?.showError(with: "ERR_NO_TEMPLATE_RES".localized())
                         }
                         return
                 }
@@ -162,7 +162,7 @@ extension FormPresenter {
                         self?.formController?.setTemplatePreview(image!)
                     } else {
                         // TODO: check internet connection
-                        self?.formController?.showError(with: "Template couldn't be loaded!")
+                        self?.formController?.showError(with: "ERR_TEMPLATE_LOADING".localized())
                     }
                 }
             }
@@ -178,7 +178,7 @@ extension FormPresenter {
         
         guard let templateId = self.selected?.id,
             let boxes = boxesForm?.boxes else {
-            // TODO: Show warning?
+            self.formController?.showError(with: "ERR_GENERIC".localized())
             return
         }
         
@@ -197,7 +197,7 @@ extension FormPresenter {
                         self?.formController?.setTemplatePreview(image!)
                     } else {
                         // TODO: check internet connection
-                        self?.formController?.showError(with: "Template could not be preview!")
+                        self?.formController?.showError(with: "ERR_PREVIEW_LOADING".localized())
                     }
                 }
             }

@@ -1,0 +1,37 @@
+/* 
+  Localized.strings
+  MemeGenerator
+
+  Created by Igor Andruskiewitsch on 8/1/19.
+  Copyright © 2019 Igor Andruskiewitsch. All rights reserved.
+*/
+
+// MARK: ACCESS:
+
+"ACCESS_ALERT_TITLE" = "Ouch! We are sorry :(";
+"ACCESS_ALERT_MSG" = "CopyFace needs Camera and Photo Library access!\
+Please allow this from the Settings app.";
+
+// MARK: BUTTONS:
+
+"BTN_OK" = "OK";
+"BTN_CONTINUE" = "Continue";
+
+// MARK: ERRORS:
+
+"ERR_TITLE" = "Ouch! We are sorry :(";
+
+"ERR_GENERIC" = "We are having some kind of weird error\
+Please try again in a few minutes!";
+
+"ERR_NO_TEMPLATE" = "It seems that no template was selected\
+Please choose one!";
+
+"ERR_NO_TEMPLATE_RES" = "We are having a hard time loading the template list\
+Please try again in a few minutes!";
+
+"ERR_TEMPLATE_LOADING" = "There was an error while loading the template\
+Please try again in a few minutes!";
+
+"ERR_PREVIEW_LOADING" = "There was an error while loading the preview\
+Please try again in a few minutes!";

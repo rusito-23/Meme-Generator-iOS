@@ -100,7 +100,7 @@
                                 <action selector="backButtonPressed:" destination="Ahd-4j-udz" id="Tcy-KN-4AA"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="Dmu-vT-nZo">
+                        <barButtonItem key="rightBarButtonItem" title="Share" id="Dmu-vT-nZo">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="saveButtonPressed:" destination="Ahd-4j-udz" id="5J8-pX-ydH"/>

@@ -31,7 +31,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNZ-Tb-d8u">
-                    <rect key="frame" x="8" y="82" width="359" height="50"/>
+                    <rect key="frame" x="8" y="180" width="359" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="s1o-zs-CDe"/>
                     </constraints>
@@ -41,19 +41,43 @@
                         <action selector="onContinue:" destination="-1" eventType="touchUpInside" id="QZk-pP-5nb"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UB8-rP-z6u">
+                    <rect key="frame" x="16" y="74" width="343" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="UVO-84-N7y"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a custom image!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nln-8H-mg6">
+                    <rect key="frame" x="16" y="100" width="343" height="72"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="72" id="7bK-gg-RbC"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="nln-8H-mg6" firstAttribute="top" secondItem="UB8-rP-z6u" secondAttribute="bottom" constant="8" id="I0L-rq-LnV"/>
                 <constraint firstItem="CNZ-Tb-d8u" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="Jlm-OS-mwz"/>
-                <constraint firstItem="CNZ-Tb-d8u" firstAttribute="top" secondItem="07P-J5-MNv" secondAttribute="bottom" constant="16" id="R2x-Q3-m1h"/>
+                <constraint firstItem="CNZ-Tb-d8u" firstAttribute="top" secondItem="nln-8H-mg6" secondAttribute="bottom" constant="8" id="QW8-eL-lGR"/>
                 <constraint firstItem="07P-J5-MNv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="SaB-ed-Tik"/>
                 <constraint firstItem="07P-J5-MNv" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="U0o-UB-b6c"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="CNZ-Tb-d8u" secondAttribute="trailing" constant="8" id="b2f-y1-7oP"/>
+                <constraint firstItem="nln-8H-mg6" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="dVX-0b-o14"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="nln-8H-mg6" secondAttribute="trailing" constant="16" id="fwx-95-3gf"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="07P-J5-MNv" secondAttribute="trailing" constant="8" id="gAe-OP-8bd"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="UB8-rP-z6u" secondAttribute="trailing" constant="16" id="khG-cH-OjJ"/>
+                <constraint firstItem="UB8-rP-z6u" firstAttribute="top" secondItem="07P-J5-MNv" secondAttribute="bottom" constant="8" id="nNb-de-3Re"/>
+                <constraint firstItem="UB8-rP-z6u" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="qd3-a6-X4G"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="61.600000000000001" y="-93.103448275862078"/>
+            <point key="canvasLocation" x="61.600000000000001" y="-93.553223388305852"/>
         </view>
     </objects>
 </document>

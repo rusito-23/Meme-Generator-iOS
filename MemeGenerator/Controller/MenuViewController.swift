@@ -31,7 +31,7 @@ extension MenuViewController {
             self.createAccessAlert()
         } else {
             logger.info("All accesses granted!")
-            self.performSegue(withIdentifier: "SHOW_FORM_VC", sender: self)
+            self.performSegue(withIdentifier: SegueConstants.SHOW_FORM, sender: self)
         }
     }
     
@@ -40,7 +40,7 @@ extension MenuViewController {
                                       message: "ACCESS_ALERT_MSG".localized(),
                                       preferredStyle: .alert)
         
-        alert.addAction(UIAlertAction(title: "BUTTON_OK".localized(),
+        alert.addAction(UIAlertAction(title: "BTN_OK".localized(),
                                       style: .default,
                                       handler: { [weak self] action in
                                         guard let `self` = self else { return }

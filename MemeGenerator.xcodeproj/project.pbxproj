@@ -20,6 +20,9 @@
 		78256CB022F325310033866C /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78256CAF22F325310033866C /* ErrorView.swift */; };
 		78256CB222F32EAB0033866C /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78256CB122F32EAB0033866C /* UIView.swift */; };
 		78256CB422F334D70033866C /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78256CB322F334D70033866C /* String.swift */; };
+		78256CB622F33AE10033866C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 78256CB522F33AE10033866C /* Localizable.strings */; };
+		78256CB922F33BB50033866C /* SegueConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78256CB822F33BB50033866C /* SegueConstants.swift */; };
+		78256CBC22F359BE0033866C /* TemplateFormView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78256CBE22F359BE0033866C /* TemplateFormView.xib */; };
 		783F5E4A22EB9A3000ECCDE9 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783F5E4922EB9A3000ECCDE9 /* UIViewController.swift */; };
 		783F5E4C22EB9C7200ECCDE9 /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 783F5E4B22EB9C7200ECCDE9 /* Lottie.framework */; };
 		783F5E4D22EB9C7200ECCDE9 /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 783F5E4B22EB9C7200ECCDE9 /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -31,7 +34,6 @@
 		784BA81D22ED38350010239C /* FormPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784BA81C22ED38350010239C /* FormPresenter.swift */; };
 		784BA82022EDE31D0010239C /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784BA81F22EDE31D0010239C /* XibView.swift */; };
 		784BA82222EDE3870010239C /* TemplateFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784BA82122EDE3870010239C /* TemplateFormView.swift */; };
-		784BA82422EDE3AA0010239C /* TemplateFormView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 784BA82322EDE3AA0010239C /* TemplateFormView.xib */; };
 		784BA82622EE41E50010239C /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 784BA82522EE41E50010239C /* AlamofireImage.framework */; };
 		784BA82722EE41E50010239C /* AlamofireImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 784BA82522EE41E50010239C /* AlamofireImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7882DA1222EB7643007632BE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7882DA1122EB7643007632BE /* Alamofire.framework */; };
@@ -81,6 +83,10 @@
 		78256CAF22F325310033866C /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		78256CB122F32EAB0033866C /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		78256CB322F334D70033866C /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		78256CB522F33AE10033866C /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		78256CB822F33BB50033866C /* SegueConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueConstants.swift; sourceTree = "<group>"; };
+		78256CBB22F355AD0033866C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		78256CBD22F359BE0033866C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TemplateFormView.xib; sourceTree = "<group>"; };
 		783F5E4922EB9A3000ECCDE9 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		783F5E4B22EB9C7200ECCDE9 /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
 		783F5E4E22EB9C9C00ECCDE9 /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
@@ -90,7 +96,6 @@
 		784BA81C22ED38350010239C /* FormPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormPresenter.swift; sourceTree = "<group>"; };
 		784BA81F22EDE31D0010239C /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
 		784BA82122EDE3870010239C /* TemplateFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateFormView.swift; sourceTree = "<group>"; };
-		784BA82322EDE3AA0010239C /* TemplateFormView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TemplateFormView.xib; sourceTree = "<group>"; };
 		784BA82522EE41E50010239C /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 		7882DA1122EB7643007632BE /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		7882DA1622EB7687007632BE /* MemeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeService.swift; sourceTree = "<group>"; };
@@ -143,6 +148,7 @@
 		7800935322EA4278003857DD /* MemeGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				78256CB722F33BAA0033866C /* Constants */,
 				784BA81B22ED38270010239C /* Presenter */,
 				783F5E5722EB9FE800ECCDE9 /* Lotties */,
 				783F5E5122EB9D4B00ECCDE9 /* View */,
@@ -164,6 +170,7 @@
 				7800935B22EA427B003857DD /* Assets.xcassets */,
 				7800935422EA4278003857DD /* AppDelegate.swift */,
 				78078BB022F0DE760070AE67 /* APICredentials.plist */,
+				78256CB522F33AE10033866C /* Localizable.strings */,
 			);
 			path = SupportFiles;
 			sourceTree = "<group>";
@@ -212,6 +219,14 @@
 			path = ErrorView;
 			sourceTree = "<group>";
 		};
+		78256CB722F33BAA0033866C /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				78256CB822F33BB50033866C /* SegueConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		783F5E5122EB9D4B00ECCDE9 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,7 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				784BA82122EDE3870010239C /* TemplateFormView.swift */,
-				784BA82322EDE3AA0010239C /* TemplateFormView.xib */,
+				78256CBE22F359BE0033866C /* TemplateFormView.xib */,
 			);
 			path = TemplateFormView;
 			sourceTree = "<group>";
@@ -366,6 +381,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78256CB622F33AE10033866C /* Localizable.strings in Resources */,
 				78A4373922EF8CDB00F84429 /* BoxFormView.xib in Resources */,
 				78256CAE22F325260033866C /* ErrorView.xib in Resources */,
 				7800936B22EA43CB003857DD /* closeness in Resources */,
@@ -376,7 +392,7 @@
 				7800935A22EA4278003857DD /* Main.storyboard in Resources */,
 				783F5E5622EB9DE700ECCDE9 /* LoadingView.xib in Resources */,
 				78078BB122F0DE760070AE67 /* APICredentials.plist in Resources */,
-				784BA82422EDE3AA0010239C /* TemplateFormView.xib in Resources */,
+				78256CBC22F359BE0033866C /* TemplateFormView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +417,7 @@
 				78B680CA22EB775A00347C34 /* MemeServiceProtocol.swift in Sources */,
 				7800935522EA4278003857DD /* AppDelegate.swift in Sources */,
 				784BA82022EDE31D0010239C /* XibView.swift in Sources */,
+				78256CB922F33BB50033866C /* SegueConstants.swift in Sources */,
 				78256CB222F32EAB0033866C /* UIView.swift in Sources */,
 				7800936D22EA47CB003857DD /* FormViewController.swift in Sources */,
 				78078BB322F0E64C0070AE67 /* URL+appending.swift in Sources */,
@@ -417,6 +434,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				7800935922EA4278003857DD /* Base */,
+				78256CBB22F355AD0033866C /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -427,6 +445,14 @@
 				7800935E22EA427B003857DD /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		78256CBE22F359BE0033866C /* TemplateFormView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78256CBD22F359BE0033866C /* Base */,
+			);
+			name = TemplateFormView.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
