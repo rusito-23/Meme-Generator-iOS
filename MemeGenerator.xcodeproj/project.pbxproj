@@ -19,6 +19,7 @@
 		78256CAE22F325260033866C /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78256CAD22F325260033866C /* ErrorView.xib */; };
 		78256CB022F325310033866C /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78256CAF22F325310033866C /* ErrorView.swift */; };
 		78256CB222F32EAB0033866C /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78256CB122F32EAB0033866C /* UIView.swift */; };
+		78256CB422F334D70033866C /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78256CB322F334D70033866C /* String.swift */; };
 		783F5E4A22EB9A3000ECCDE9 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783F5E4922EB9A3000ECCDE9 /* UIViewController.swift */; };
 		783F5E4C22EB9C7200ECCDE9 /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 783F5E4B22EB9C7200ECCDE9 /* Lottie.framework */; };
 		783F5E4D22EB9C7200ECCDE9 /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 783F5E4B22EB9C7200ECCDE9 /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -79,6 +80,7 @@
 		78256CAD22F325260033866C /* ErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorView.xib; sourceTree = "<group>"; };
 		78256CAF22F325310033866C /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		78256CB122F32EAB0033866C /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		78256CB322F334D70033866C /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		783F5E4922EB9A3000ECCDE9 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		783F5E4B22EB9C7200ECCDE9 /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
 		783F5E4E22EB9C9C00ECCDE9 /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
@@ -300,6 +302,7 @@
 				783F5E4922EB9A3000ECCDE9 /* UIViewController.swift */,
 				78078BB222F0E64C0070AE67 /* URL+appending.swift */,
 				78256CB122F32EAB0033866C /* UIView.swift */,
+				78256CB322F334D70033866C /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 			files = (
 				783F5E4A22EB9A3000ECCDE9 /* UIViewController.swift in Sources */,
 				78A4373B22EF8DBD00F84429 /* BoxCell.swift in Sources */,
+				78256CB422F334D70033866C /* String.swift in Sources */,
 				788A560A22EB6A740009E2F7 /* MemeTemplate.swift in Sources */,
 				784BA81D22ED38350010239C /* FormPresenter.swift in Sources */,
 				78B680CD22EB7C5800347C34 /* SwiftyBeaver.swift in Sources */,

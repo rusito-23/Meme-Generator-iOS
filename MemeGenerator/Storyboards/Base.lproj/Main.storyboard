@@ -29,7 +29,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="New!"/>
                                 <connections>
-                                    <segue destination="40w-M1-NSR" kind="show" id="uhC-Tm-J1m"/>
+                                    <action selector="onGetStartedClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cOi-DF-NMO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -45,6 +45,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="ECa-OA-zrn"/>
+                    <connections>
+                        <segue destination="40w-M1-NSR" kind="show" identifier="SHOW_FORM_VC" id="KGM-6r-xwa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

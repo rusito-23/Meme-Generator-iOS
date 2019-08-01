@@ -41,7 +41,14 @@ extension FormViewController {
     }
     
     @IBAction func saveButtonPressed(_ sender: Any) {
-        // TODO: call presenter
+        guard let finalImage = self.previewImage.image else {
+            logger.warning("No image to share!")
+            return
+        }
+        
+        let shareVC = UIActivityViewController(activityItems: [finalImage] , applicationActivities: nil)
+        shareVC.popoverPresentationController?.sourceView = self.view
+        self.present(shareVC, animated: true, completion: nil)
     }
     
 }
