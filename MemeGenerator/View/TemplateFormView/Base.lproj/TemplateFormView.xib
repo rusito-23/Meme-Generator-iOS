@@ -13,7 +13,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TemplateFormView" customModule="MemeGenerator" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="upR-Qd-DtY"/>
-                <outlet property="templateSelected" destination="07P-J5-MNv" id="CVy-hs-XkK"/>
+                <outlet property="selectCustom" destination="nln-8H-mg6" id="H6S-Jp-PM7"/>
+                <outlet property="selectTemplate" destination="07P-J5-MNv" id="CVy-hs-XkK"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

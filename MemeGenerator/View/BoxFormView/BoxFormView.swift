@@ -28,20 +28,47 @@ class BoxFormView: XibView {
         self.boxTables.dataSource = self
         self.boxTables.register(UINib(nibName: "BoxCell", bundle: nil),
                                 forCellReuseIdentifier: "BOX_CELL")
+        
+
     }
     
     override func setupWithSuperView(_ superView: UIView) {
         super.setupWithSuperView(superView)
+        
+        
+        // Show animation
+        let mainWindow = UIApplication.shared.keyWindow!
+        self.frame.origin.x = superView.bounds.origin.x + mainWindow.frame.width
+        UIView.animate(withDuration: 1, animations: {
+            self.frame.origin.x = superView.bounds.origin.x
+        })
+        
+        
+        // Boxes and Keyboard configuration
         
         if let count = selected?.boxCount {
             for i in 0...(count - 1) {
                 self.boxes.append(defaultText(for: i))
             }
         }
-
+        
         setupKeyBoardObservers()
+        
         self.templateTitleView.text = selected?.name
         self.presenter?.previewTemplate()
+    }
+    
+    func hide() {
+        guard let superView = self.superview else { return }
+        
+        // Hide animation
+        let mainWindow = UIApplication.shared.keyWindow!
+        self.frame.origin.x = superView.bounds.origin.x
+        UIView.animate(withDuration: 1, animations: {
+            self.frame.origin.x = superView.bounds.origin.x - mainWindow.frame.width
+        })
+
+        self.removeFromSuperview()
     }
 
 }

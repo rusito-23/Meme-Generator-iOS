@@ -59,7 +59,7 @@ extension FormPresenter {
     }
     
     func hideTemplatesForm() {
-        self.templateForm?.removeFromSuperview()
+        self.templateForm?.hide()
         self.templateForm = nil
     }
     
@@ -82,7 +82,7 @@ extension FormPresenter {
     }
     
     func hideBoxesForm() {
-        self.boxesForm?.removeFromSuperview()
+        self.boxesForm?.hide()
         self.boxesForm = nil
     }
     

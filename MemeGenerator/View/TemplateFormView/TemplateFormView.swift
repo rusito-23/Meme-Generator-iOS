@@ -20,16 +20,20 @@ import UIKit
     // MARK: IBOutlets
     
     @IBOutlet var contentView: UIView!
-    @IBOutlet weak var templateSelected: UITextField!
+    @IBOutlet weak var selectTemplate: UITextField!
+    @IBOutlet weak var selectCustom: UILabel!
     
     // MARK: Lifecycle
     
     override func customConfig() {
         // template picker config
         let pickerView = UIPickerView()
-        templateSelected.inputView = pickerView
+        selectTemplate.inputView = pickerView
         pickerView.dataSource = self
         pickerView.delegate = self
+        
+        // add beta text to selectCustom
+//        selectCustom.text += String.withStr
     }
     
     override func setupWithSuperView(_ superView: UIView) {
@@ -37,6 +41,26 @@ import UIKit
         
         // templates initalization
         presenter?.findTemplates()
+        
+        // Show animation
+        let mainWindow = UIApplication.shared.keyWindow!
+        self.frame.origin.x = superView.bounds.origin.x + mainWindow.frame.width
+        UIView.animate(withDuration: 1, animations: {
+            self.frame.origin.x = superView.bounds.origin.x
+        })
+    }
+    
+    func hide() {
+        guard let superView = self.superview else { return }
+        
+        // Hide animation
+        let mainWindow = UIApplication.shared.keyWindow!
+        self.frame.origin.x = superView.bounds.origin.x
+        UIView.animate(withDuration: 1, animations: {
+            self.frame.origin.x = superView.bounds.origin.x - mainWindow.frame.width
+        })
+        
+        self.removeFromSuperview()
     }
     
     @IBAction func onContinue(_ sender: Any) {
@@ -75,7 +99,7 @@ extension TemplateFormView: UIPickerViewDataSource, UIPickerViewDelegate {
     func pickerView( _ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         guard let template = templates?[row] else { return }
         
-        templateSelected.text = template.name
+        selectTemplate.text = template.name
         self.endEditing(true)
         
         self.presenter?.templateSelected(template)
