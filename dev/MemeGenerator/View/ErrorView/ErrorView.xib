@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ErrorView" customModule="MemeGenerator" customModuleProvider="target">
+            <connections>
+                <outlet property="errorMessageV" destination="yY2-Hd-OSD" id="BiS-aJ-mlq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Message" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yY2-Hd-OSD">
+                    <rect key="frame" x="16" y="311" width="343" height="180"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="180" id="ZDR-ab-0KV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="guess_ill_die" translatesAutoresizingMaskIntoConstraints="NO" id="Lhk-FB-OBz">
+                    <rect key="frame" x="87.5" y="65" width="200" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="KFe-7x-HL0"/>
+                        <constraint firstAttribute="width" constant="200" id="ivT-G2-8PB"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RtD-CG-jrl">
+                    <rect key="frame" x="32" y="551" width="311" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="OK">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="backButtonPressed:" destination="-1" eventType="touchUpInside" id="kB9-bZ-5I0"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.80006602112676062" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Lhk-FB-OBz" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="45" id="4op-7j-u52"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="yY2-Hd-OSD" secondAttribute="trailing" constant="16" id="9p9-oY-Krn"/>
+                <constraint firstItem="RtD-CG-jrl" firstAttribute="top" secondItem="yY2-Hd-OSD" secondAttribute="bottom" constant="60" id="LTF-CZ-oVp"/>
+                <constraint firstItem="RtD-CG-jrl" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="32" id="Nks-Ef-DVE"/>
+                <constraint firstItem="yY2-Hd-OSD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="OpJ-9C-nZV"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="RtD-CG-jrl" secondAttribute="bottom" constant="80" id="PPY-fp-E16"/>
+                <constraint firstItem="Lhk-FB-OBz" firstAttribute="centerX" secondItem="yY2-Hd-OSD" secondAttribute="centerX" id="dew-iT-PB9"/>
+                <constraint firstItem="yY2-Hd-OSD" firstAttribute="top" secondItem="Lhk-FB-OBz" secondAttribute="bottom" constant="46" id="mXw-rb-Xad"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="RtD-CG-jrl" secondAttribute="trailing" constant="32" id="ybt-AR-Rkc"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="127.2" y="172.26386806596702"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="guess_ill_die" width="768" height="625"/>
+    </resources>
+</document>

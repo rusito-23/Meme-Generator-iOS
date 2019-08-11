@@ -1,0 +1,4 @@
+github "Alamofire/Alamofire"
+github "SwiftyBeaver/SwiftyBeaver" "1.6.2"
+github "airbnb/lottie-ios" "65402f3cf81e9148bc6daad1d6e5f8e310169711"
+github "Alamofire/AlamofireImage" ~> 3.5
