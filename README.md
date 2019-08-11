@@ -1,12 +1,12 @@
 # iOS Meme Generator
 
-## Overview
+## Overview
 
 This app was made using the [ImgFlip Meme API](https://api.imgflip.com).
 It allows the user to download and make use of several meme templates.
 The custom template option is in progress.
 
-## Setup and run
+## Setup and run
 
 All dependencies are built with Carthage, to install them, use `carthage update --platform iOS`.
 
@@ -27,4 +27,4 @@ A **ImgFlip Meme API User** is required to run the project. It can be added by a
 
 ## DEMO
 
-![Demo with template](doc/Demo_with_template.gif)
+<img src="doc/Demo_with_template.gif" width="200" height="50"/>
