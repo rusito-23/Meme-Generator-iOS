@@ -11,20 +11,29 @@ import Photos
 
 class MenuViewController: UIViewController {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var createButton: CustomButton!
+    @IBOutlet weak var logoImageView: UIImageView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setUpView()
         if accessNeedRequests() {
             requestAccess()
         }
     }
-
-
 }
 
 // MARK: UI Functions
 
 extension MenuViewController {
+
+    func setUpView() {
+        self.titleLabel.text = "MENU_TITLE".localized()
+        self.titleLabel.font = MainFont.title();
+        self.logoImageView.image = UIImage(named: "hide_the_pain")
+        self.createButton.setTitle("BTN_CREATE".localized(), for: .normal)
+    }
     
     @IBAction func onGetStartedClicked(_ sender: Any) {
         if accessNeedRequests() {
@@ -39,17 +48,14 @@ extension MenuViewController {
         let alert = UIAlertController(title: "ACCESS_ALERT_TITLE".localized(),
                                       message: "ACCESS_ALERT_MSG".localized(),
                                       preferredStyle: .alert)
-        
         alert.addAction(UIAlertAction(title: "BTN_OK".localized(),
                                       style: .default,
                                       handler: { [weak self] action in
-                                        guard let `self` = self else { return }
-                                        self.requestAccess()
+                                        self?.requestAccess()
         }))
-        
         self.present(alert, animated: true, completion: nil)
     }
-    
+
 }
 
 // MARK: Access request functions

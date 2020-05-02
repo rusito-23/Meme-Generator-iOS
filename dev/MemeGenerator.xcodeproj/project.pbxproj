@@ -30,7 +30,6 @@
 		783F5E5022EB9C9C00ECCDE9 /* SwiftyBeaver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 783F5E4E22EB9C9C00ECCDE9 /* SwiftyBeaver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		783F5E5422EB9D6400ECCDE9 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783F5E5322EB9D6400ECCDE9 /* LoadingView.swift */; };
 		783F5E5622EB9DE700ECCDE9 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 783F5E5522EB9DE700ECCDE9 /* LoadingView.xib */; };
-		783F5E5922EBA0E200ECCDE9 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 783F5E5822EBA0E100ECCDE9 /* loading.json */; };
 		784BA81D22ED38350010239C /* FormPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784BA81C22ED38350010239C /* FormPresenter.swift */; };
 		784BA82022EDE31D0010239C /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784BA81F22EDE31D0010239C /* XibView.swift */; };
 		784BA82222EDE3870010239C /* TemplateFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784BA82122EDE3870010239C /* TemplateFormView.swift */; };
@@ -48,6 +47,9 @@
 		78A4373E22EF922200F84429 /* BoxCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78A4373D22EF922200F84429 /* BoxCell.xib */; };
 		78B680CA22EB775A00347C34 /* MemeServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B680C922EB775A00347C34 /* MemeServiceProtocol.swift */; };
 		78B680CD22EB7C5800347C34 /* SwiftyBeaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B680CC22EB7C5800347C34 /* SwiftyBeaver.swift */; };
+		78C95F8A245E38A800D1219E /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C95F89245E38A800D1219E /* RoundButton.swift */; };
+		78DD4544245CF98A0040539F /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 78DD4543245CF9890040539F /* loading.json */; };
+		78DD4546245DE3760040539F /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DD4545245DE3760040539F /* Font.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -85,14 +87,12 @@
 		78256CB322F334D70033866C /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		78256CB522F33AE10033866C /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		78256CB822F33BB50033866C /* SegueConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueConstants.swift; sourceTree = "<group>"; };
-		78256CBB22F355AD0033866C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		78256CBD22F359BE0033866C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TemplateFormView.xib; sourceTree = "<group>"; };
 		783F5E4922EB9A3000ECCDE9 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		783F5E4B22EB9C7200ECCDE9 /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
 		783F5E4E22EB9C9C00ECCDE9 /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
 		783F5E5322EB9D6400ECCDE9 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		783F5E5522EB9DE700ECCDE9 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
-		783F5E5822EBA0E100ECCDE9 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		784BA81C22ED38350010239C /* FormPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormPresenter.swift; sourceTree = "<group>"; };
 		784BA81F22EDE31D0010239C /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
 		784BA82122EDE3870010239C /* TemplateFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateFormView.swift; sourceTree = "<group>"; };
@@ -108,6 +108,9 @@
 		78A4373D22EF922200F84429 /* BoxCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoxCell.xib; sourceTree = "<group>"; };
 		78B680C922EB775A00347C34 /* MemeServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeServiceProtocol.swift; sourceTree = "<group>"; };
 		78B680CC22EB7C5800347C34 /* SwiftyBeaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyBeaver.swift; sourceTree = "<group>"; };
+		78C95F89245E38A800D1219E /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		78DD4543245CF9890040539F /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		78DD4545245DE3760040539F /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				78256CB822F33BB50033866C /* SegueConstants.swift */,
+				78DD4545245DE3760040539F /* Font.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -230,6 +234,7 @@
 		783F5E5122EB9D4B00ECCDE9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				78C95F88245E387D00D1219E /* Button */,
 				784BA81F22EDE31D0010239C /* XibView.swift */,
 				78256CAC22F31E7A0033866C /* ErrorView */,
 				78A4373522EF8C4E00F84429 /* BoxFormView */,
@@ -251,7 +256,7 @@
 		783F5E5722EB9FE800ECCDE9 /* Lotties */ = {
 			isa = PBXGroup;
 			children = (
-				783F5E5822EBA0E100ECCDE9 /* loading.json */,
+				78DD4543245CF9890040539F /* loading.json */,
 			);
 			path = Lotties;
 			sourceTree = "<group>";
@@ -322,6 +327,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		78C95F88245E387D00D1219E /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				78C95F89245E38A800D1219E /* RoundButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -355,6 +368,7 @@
 				TargetAttributes = {
 					7800935022EA4278003857DD = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1120;
 					};
 				};
 			};
@@ -383,11 +397,11 @@
 			files = (
 				78256CB622F33AE10033866C /* Localizable.strings in Resources */,
 				78A4373922EF8CDB00F84429 /* BoxFormView.xib in Resources */,
+				78DD4544245CF98A0040539F /* loading.json in Resources */,
 				78256CAE22F325260033866C /* ErrorView.xib in Resources */,
 				7800936B22EA43CB003857DD /* closeness in Resources */,
 				78A4373E22EF922200F84429 /* BoxCell.xib in Resources */,
 				7800935F22EA427B003857DD /* LaunchScreen.storyboard in Resources */,
-				783F5E5922EBA0E200ECCDE9 /* loading.json in Resources */,
 				7800935C22EA427B003857DD /* Assets.xcassets in Resources */,
 				7800935A22EA4278003857DD /* Main.storyboard in Resources */,
 				783F5E5622EB9DE700ECCDE9 /* LoadingView.xib in Resources */,
@@ -415,10 +429,12 @@
 				784BA82222EDE3870010239C /* TemplateFormView.swift in Sources */,
 				7800935722EA4278003857DD /* MenuViewController.swift in Sources */,
 				78B680CA22EB775A00347C34 /* MemeServiceProtocol.swift in Sources */,
+				78DD4546245DE3760040539F /* Font.swift in Sources */,
 				7800935522EA4278003857DD /* AppDelegate.swift in Sources */,
 				784BA82022EDE31D0010239C /* XibView.swift in Sources */,
 				78256CB922F33BB50033866C /* SegueConstants.swift in Sources */,
 				78256CB222F32EAB0033866C /* UIView.swift in Sources */,
+				78C95F8A245E38A800D1219E /* RoundButton.swift in Sources */,
 				7800936D22EA47CB003857DD /* FormViewController.swift in Sources */,
 				78078BB322F0E64C0070AE67 /* URL+appending.swift in Sources */,
 				78A4373722EF8C9300F84429 /* BoxFormView.swift in Sources */,
@@ -434,7 +450,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				7800935922EA4278003857DD /* Base */,
-				78256CBB22F355AD0033866C /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -591,7 +606,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rusito.veintitres.MemeGenerator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -613,7 +628,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rusito.veintitres.MemeGenerator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

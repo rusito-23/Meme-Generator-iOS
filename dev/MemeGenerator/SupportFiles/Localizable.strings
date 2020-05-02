@@ -6,16 +6,28 @@
   Copyright © 2019 Igor Andruskiewitsch. All rights reserved.
 */
 
-// MARK: ACCESS:
+// MARK: TITLES:
+
+"MENU_TITLE" = "MEME GENERATOR";
+"FORM_TITLE" = "Create your meme!";
+
+// MARK: ALERTS:
 
 "ACCESS_ALERT_TITLE" = "Ouch! We are sorry :(";
 "ACCESS_ALERT_MSG" = "CopyFace needs Camera and Photo Library access!\
 Please allow this from the Settings app.";
 
+"SHARE_ALERT_TITLE" = "Ouch! We are sorry :(";
+"SHARE_ALERT_MSG" = "Looks like you have nothing to share.";
+
 // MARK: BUTTONS:
 
 "BTN_OK" = "OK";
 "BTN_CONTINUE" = "Continue";
+"BTN_CREATE" = "CREATE";
+"BTN_SHARE" = "Share";
+"BTN_BACK" = "Back";
+"BTN_YEA" = "Yeah, ur right...";
 
 // MARK: ERRORS:
 

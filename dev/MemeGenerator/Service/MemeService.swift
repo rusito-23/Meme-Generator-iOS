@@ -101,10 +101,9 @@ extension MemeServiceImpl: MemeService {
                     res.success ?? false,
                     let imageURIString = res.data?.url,
                     let imageURI = URL(string: imageURIString) else {
-                        
-                    logger.error("Response not successfull!")
-                    completion(nil)
-                    return
+                      logger.error("Response not successfull, reponse: \(String(decoding: data, as:UTF8.self))")
+                      completion(nil)
+                      return
                 }
                 
                 Alamofire.request(imageURI)

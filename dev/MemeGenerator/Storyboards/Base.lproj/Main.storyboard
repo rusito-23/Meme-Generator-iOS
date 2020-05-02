@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,34 +16,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MEME GENERATOR" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ql1-4P-f9I">
-                                <rect key="frame" x="8" y="36" width="359" height="110.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MENU_TITLE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ql1-4P-f9I">
+                                <rect key="frame" x="8" y="46" width="359" height="55.5"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="46"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sge-mb-Isw">
-                                <rect key="frame" x="16" y="313.5" width="343" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sge-mb-Isw" customClass="CustomButton" customModule="MemeGenerator" customModuleProvider="target">
+                                <rect key="frame" x="32" y="463" width="311" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <state key="normal" title="New!"/>
+                                <state key="normal" title="BTN_CREATE"/>
                                 <connections>
                                     <action selector="onGetStartedClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cOi-DF-NMO"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hide_the_pain" translatesAutoresizingMaskIntoConstraints="NO" id="ggR-gq-XNC">
+                                <rect key="frame" x="87.5" y="184" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="EhG-2G-t2g"/>
+                                    <constraint firstAttribute="width" constant="200" id="qOn-DR-JaS"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Ql1-4P-f9I" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="8va-ou-cKq"/>
-                            <constraint firstItem="sge-mb-Isw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="AE2-Nr-4ba"/>
+                            <constraint firstItem="Ql1-4P-f9I" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="46" id="8va-ou-cKq"/>
+                            <constraint firstItem="sge-mb-Isw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="N8A-Bt-inH"/>
+                            <constraint firstItem="ggR-gq-XNC" firstAttribute="top" secondItem="Ql1-4P-f9I" secondAttribute="bottom" constant="82.5" id="QRd-VN-h4W"/>
                             <constraint firstItem="Ql1-4P-f9I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Xbs-WD-kWY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sge-mb-Isw" secondAttribute="trailing" constant="16" id="YAa-yO-Zwj"/>
-                            <constraint firstItem="sge-mb-Isw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Z4B-Bi-XgS"/>
+                            <constraint firstItem="sge-mb-Isw" firstAttribute="top" secondItem="ggR-gq-XNC" secondAttribute="bottom" constant="79" id="eGG-VP-koy"/>
+                            <constraint firstItem="ggR-gq-XNC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jnf-kH-n64"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sge-mb-Isw" secondAttribute="trailing" constant="32" id="koB-dB-XgL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ql1-4P-f9I" secondAttribute="trailing" constant="8" id="xmW-XZ-nfi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="ECa-OA-zrn"/>
                     <connections>
+                        <outlet property="createButton" destination="sge-mb-Isw" id="wyJ-cz-wfh"/>
+                        <outlet property="logoImageView" destination="ggR-gq-XNC" id="Snb-Wf-UKx"/>
+                        <outlet property="titleLabel" destination="Ql1-4P-f9I" id="d0y-bJ-Wou"/>
                         <segue destination="40w-M1-NSR" kind="show" identifier="SHOW_FORM_VC" id="KGM-6r-xwa"/>
                     </connections>
                 </viewController>
@@ -56,26 +66,26 @@
         <!--Form View Controller-->
         <scene sceneID="hjm-mj-Oh6">
             <objects>
-                <viewController id="Ahd-4j-udz" customClass="FormViewController" customModule="MemeGenerator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Ahd-4j-udz" customClass="FormViewController" customModule="MemeGenerator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ud5-74-0BQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create your meme!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4S-zi-1Xh">
-                                <rect key="frame" x="8" y="80" width="359" height="38.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FORM_TITLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4S-zi-1Xh">
+                                <rect key="frame" x="8" y="72" width="359" height="38.5"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YCy-b0-G96">
-                                <rect key="frame" x="0.0" y="437" width="375" height="230"/>
+                                <rect key="frame" x="0.0" y="417" width="375" height="230"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="230" id="Kfi-or-Zcy"/>
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ppm-Zh-mva">
-                                <rect key="frame" x="16" y="134.5" width="343" height="286.5"/>
+                                <rect key="frame" x="16" y="126.5" width="343" height="274.5"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -94,13 +104,13 @@
                         <viewLayoutGuide key="safeArea" id="Qh5-tP-Orp"/>
                     </view>
                     <navigationItem key="navigationItem" id="RYc-BH-rNG">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="6GG-FC-Ngo">
+                        <barButtonItem key="leftBarButtonItem" title="BTN_BACK" image="arrow.left" catalog="system" id="6GG-FC-Ngo">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="backButtonPressed:" destination="Ahd-4j-udz" id="Tcy-KN-4AA"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Share" id="Dmu-vT-nZo">
+                        <barButtonItem key="rightBarButtonItem" title="BTN_SHARE" image="square.and.arrow.up" catalog="system" id="Dmu-vT-nZo">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="saveButtonPressed:" destination="Ahd-4j-udz" id="5J8-pX-ydH"/>
@@ -108,8 +118,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="backButton" destination="6GG-FC-Ngo" id="3b7-EL-Ats"/>
                         <outlet property="formView" destination="YCy-b0-G96" id="X7T-bY-mCc"/>
                         <outlet property="previewImage" destination="Ppm-Zh-mva" id="xWN-hO-06S"/>
+                        <outlet property="shareButton" destination="Dmu-vT-nZo" id="4le-OF-vYD"/>
+                        <outlet property="titleLabel" destination="v4S-zi-1Xh" id="ome-pZ-6lI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uo7-fD-uud" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -119,10 +132,10 @@
         <!--Navigation Controller-->
         <scene sceneID="dgs-8S-yNa">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="40w-M1-NSR" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="40w-M1-NSR" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6Ue-3b-685">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -135,4 +148,9 @@
             <point key="canvasLocation" x="1149.5999999999999" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrow.left" catalog="system" width="64" height="48"/>
+        <image name="hide_the_pain" width="225" height="225"/>
+        <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
+    </resources>
 </document>

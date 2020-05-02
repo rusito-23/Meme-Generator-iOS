@@ -57,8 +57,7 @@ class LoadingView: UIView {
         
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        
-        contentView.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+        contentView.backgroundColor = UIColor.white.withAlphaComponent(0.5)
     }
     
     private func loadAnimation() {
@@ -70,7 +69,6 @@ class LoadingView: UIView {
     // MARK: Size and constraints handling
     
     public func setupWithSuperView(_ superView: UIView) {
-        
         // setup size
         self.translatesAutoresizingMaskIntoConstraints = false
         self.clipsToBounds = true
@@ -80,10 +78,8 @@ class LoadingView: UIView {
         superView.addSubview(self)
         
         // constraints
-        superView.addConstraints([
-            NSLayoutConstraint(item: self.contentView, attribute: .height, relatedBy: .equal, toItem: superView, attribute: .height, multiplier: 1, constant: 0),
-            NSLayoutConstraint(item: self.contentView, attribute: .width, relatedBy: .equal, toItem: superView, attribute: .width, multiplier: 1, constant: 0),
-            ])
+        self.contentView?.heightAnchor.constraint(equalTo: superView.heightAnchor).isActive = true
+        self.contentView?.widthAnchor.constraint(equalTo: superView.widthAnchor).isActive = true
     }
     
 }

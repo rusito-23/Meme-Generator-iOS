@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,19 +21,15 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Choose your template!" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="07P-J5-MNv">
-                    <rect key="frame" x="8" y="16" width="359" height="50"/>
+                    <rect key="frame" x="16" y="16" width="343" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="Sjg-cQ-OU0"/>
                     </constraints>
-                    <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNZ-Tb-d8u">
-                    <rect key="frame" x="8" y="180" width="359" height="50"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="s1o-zs-CDe"/>
-                    </constraints>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNZ-Tb-d8u" customClass="CustomButton" customModule="MemeGenerator" customModuleProvider="target">
+                    <rect key="frame" x="32" y="148" width="311" height="36"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="Continue"/>
                     <connections>
@@ -52,9 +46,9 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a custom image!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nln-8H-mg6">
-                    <rect key="frame" x="16" y="100" width="343" height="72"/>
+                    <rect key="frame" x="16" y="100" width="343" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="72" id="7bK-gg-RbC"/>
+                        <constraint firstAttribute="height" constant="40" id="7bK-gg-RbC"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="23"/>
                     <nil key="textColor"/>
@@ -64,14 +58,14 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="nln-8H-mg6" firstAttribute="top" secondItem="UB8-rP-z6u" secondAttribute="bottom" constant="8" id="I0L-rq-LnV"/>
-                <constraint firstItem="CNZ-Tb-d8u" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="Jlm-OS-mwz"/>
+                <constraint firstItem="CNZ-Tb-d8u" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="32" id="Jlm-OS-mwz"/>
                 <constraint firstItem="CNZ-Tb-d8u" firstAttribute="top" secondItem="nln-8H-mg6" secondAttribute="bottom" constant="8" id="QW8-eL-lGR"/>
-                <constraint firstItem="07P-J5-MNv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="SaB-ed-Tik"/>
+                <constraint firstItem="07P-J5-MNv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="SaB-ed-Tik"/>
                 <constraint firstItem="07P-J5-MNv" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="U0o-UB-b6c"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="CNZ-Tb-d8u" secondAttribute="trailing" constant="8" id="b2f-y1-7oP"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="CNZ-Tb-d8u" secondAttribute="trailing" constant="32" id="b2f-y1-7oP"/>
                 <constraint firstItem="nln-8H-mg6" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="dVX-0b-o14"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="nln-8H-mg6" secondAttribute="trailing" constant="16" id="fwx-95-3gf"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="07P-J5-MNv" secondAttribute="trailing" constant="8" id="gAe-OP-8bd"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="07P-J5-MNv" secondAttribute="trailing" constant="16" id="gAe-OP-8bd"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="UB8-rP-z6u" secondAttribute="trailing" constant="16" id="khG-cH-OjJ"/>
                 <constraint firstItem="UB8-rP-z6u" firstAttribute="top" secondItem="07P-J5-MNv" secondAttribute="bottom" constant="8" id="nNb-de-3Re"/>
                 <constraint firstItem="UB8-rP-z6u" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="qd3-a6-X4G"/>

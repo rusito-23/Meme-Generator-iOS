@@ -9,7 +9,7 @@
 "Ql1-4P-f9I.text" = "MEME GENERATOR";
 
 /* Class = "UIButton"; normalTitle = "New!"; ObjectID = "sge-mb-Isw"; */
-"sge-mb-Isw.normalTitle" = "New meme!";
+"sge-mb-Isw.normalTitle" = "Create";
 
 /* Class = "UILabel"; text = "Create your meme!"; ObjectID = "v4S-zi-1Xh"; */
 "v4S-zi-1Xh.text" = "Create your meme!";
