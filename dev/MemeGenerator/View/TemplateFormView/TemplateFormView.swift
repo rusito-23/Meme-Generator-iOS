@@ -26,14 +26,15 @@ import UIKit
     // MARK: Lifecycle
     
     override func customConfig() {
-        // template picker config
+        // Template picker config
         let pickerView = UIPickerView()
         selectTemplate.inputView = pickerView
         pickerView.dataSource = self
         pickerView.delegate = self
-        
-        // add beta text to selectCustom
-//        selectCustom.text += String.withStr
+
+        // Setup
+        selectTemplate.font = MainFont.paragraph()
+        selectCustom.font = MainFont.paragraph()
     }
     
     override func setupWithSuperView(_ superView: UIView) {

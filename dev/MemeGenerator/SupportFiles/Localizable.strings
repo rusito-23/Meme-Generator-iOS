@@ -33,17 +33,17 @@ Please allow this from the Settings app.";
 
 "ERR_TITLE" = "Ouch! We are sorry :(";
 
-"ERR_GENERIC" = "We are having some kind of weird error\
+"ERR_GENERIC" = "We are having some kind of weird error.\
 Please try again in a few minutes!";
 
-"ERR_NO_TEMPLATE" = "It seems that no template was selected\
+"ERR_NO_TEMPLATE" = "You didn't select any template.\
 Please choose one!";
 
-"ERR_NO_TEMPLATE_RES" = "We are having a hard time loading the template list\
+"ERR_NO_TEMPLATE_RES" = "We are having a hard time loading the template list.\
 Please try again in a few minutes!";
 
-"ERR_TEMPLATE_LOADING" = "There was an error while loading the template\
+"ERR_TEMPLATE_LOADING" = "There was an error while loading the template.\
 Please try again in a few minutes!";
 
-"ERR_PREVIEW_LOADING" = "There was an error while loading the preview\
+"ERR_PREVIEW_LOADING" = "There was an error while loading the preview.\
 Please try again in a few minutes!";

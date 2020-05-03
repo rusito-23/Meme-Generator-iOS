@@ -11,30 +11,52 @@ import UIKit
 
 
 @IBDesignable class ErrorView: XibView {
-    
-    var parentController: UIViewController?
+
+    // MARK: Properties and Outlets
 
     @IBInspectable
     var message: String? {
-        set { errorMessageV.text = newValue }
-        get { return errorMessageV.text }
+        set { errorMessageLabel.text = newValue }
+        get { return errorMessageLabel.text }
     }
     
-    @IBOutlet weak var errorMessageV: UILabel!
+    @IBOutlet weak var errorMessageLabel: UILabel!
     
-    @IBAction func backButtonPressed(_ sender: Any) {
-        self.parentController?.dismiss(animated: true, completion: nil)
-        self.removeFromSuperview()
+    @IBAction func dismissButtonPressed(_ sender: Any) {
+        guard let superView = superview else { return }
+        UIView.animate(withDuration: 0.5, animations: { [weak self] in
+            guard let self = self else { return }
+            self.frame.origin.x = superView.bounds.origin.x + self.mainWindow.frame.width
+        }, completion: { [weak self] _ in
+            self?.removeFromSuperview()
+        })
+    }
+
+    // MARK: Setup
+
+    private var mainWindow: UIWindow {
+        return UIApplication.shared.keyWindow!
     }
     
     override func setupWithSuperView(_ superView: UIView) {
-        let mainWindow = UIApplication.shared.keyWindow!
-        
         self.autoresizesSubviews = false
         self.clipsToBounds = true
         self.frame = mainWindow.frame
-        
-        mainWindow.addSubview(self);
+        mainWindow.addSubview(self)
+        self.frame.origin.x = superView.bounds.origin.x + mainWindow.frame.width
+        UIView.animate(withDuration: 0.5, animations: {
+            self.frame.origin.x = superView.bounds.origin.x
+        })
+    }
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setup()
+    }
+
+    func setup() {
+        self.backgroundColor = .white
+        self.errorMessageLabel.font = MainFont.title()
     }
     
 }

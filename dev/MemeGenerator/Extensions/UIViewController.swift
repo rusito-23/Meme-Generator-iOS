@@ -27,7 +27,6 @@ extension UIViewController {
     func showError(with message: String) {
         let errorView = ErrorView()
         errorView.message = message
-        errorView.parentController = self
         errorView.setupWithSuperView(self.view)
     }
     

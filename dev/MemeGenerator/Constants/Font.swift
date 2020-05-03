@@ -13,6 +13,7 @@ struct MainFont {
     private static let NAME = "AppleSDGothicNeo-Regular"
     private static let titleSize: CGFloat = 46
     private static let subtitleSize: CGFloat = 32
+    private static let paragraphSize: CGFloat = 23
     private static let buttonSize: CGFloat = 23
 
     private static func font(size: CGFloat) -> UIFont {
@@ -29,5 +30,9 @@ struct MainFont {
 
     static func button() -> UIFont {
         return font(size: buttonSize)
+    }
+
+    static func paragraph() -> UIFont {
+        return font(size: paragraphSize)
     }
 }
