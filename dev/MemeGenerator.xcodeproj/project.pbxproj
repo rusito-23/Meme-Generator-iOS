@@ -48,6 +48,9 @@
 		78B680CA22EB775A00347C34 /* MemeServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B680C922EB775A00347C34 /* MemeServiceProtocol.swift */; };
 		78B680CD22EB7C5800347C34 /* SwiftyBeaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B680CC22EB7C5800347C34 /* SwiftyBeaver.swift */; };
 		78C95F8A245E38A800D1219E /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C95F89245E38A800D1219E /* RoundButton.swift */; };
+		78CC420D2460871C00A06DA9 /* MemeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CC420B2460871C00A06DA9 /* MemeCell.swift */; };
+		78CC420E2460871C00A06DA9 /* MemeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78CC420C2460871C00A06DA9 /* MemeCell.xib */; };
+		78CC42102460941300A06DA9 /* MemeCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CC420F2460941300A06DA9 /* MemeCellPresenter.swift */; };
 		78DD4544245CF98A0040539F /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 78DD4543245CF9890040539F /* loading.json */; };
 		78DD4546245DE3760040539F /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DD4545245DE3760040539F /* Font.swift */; };
 /* End PBXBuildFile section */
@@ -109,6 +112,9 @@
 		78B680C922EB775A00347C34 /* MemeServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeServiceProtocol.swift; sourceTree = "<group>"; };
 		78B680CC22EB7C5800347C34 /* SwiftyBeaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyBeaver.swift; sourceTree = "<group>"; };
 		78C95F89245E38A800D1219E /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		78CC420B2460871C00A06DA9 /* MemeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeCell.swift; sourceTree = "<group>"; };
+		78CC420C2460871C00A06DA9 /* MemeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemeCell.xib; sourceTree = "<group>"; };
+		78CC420F2460941300A06DA9 /* MemeCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeCellPresenter.swift; sourceTree = "<group>"; };
 		78DD4543245CF9890040539F /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		78DD4545245DE3760040539F /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -234,6 +240,7 @@
 		783F5E5122EB9D4B00ECCDE9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				78CC420A246086FD00A06DA9 /* MemeCell */,
 				78C95F88245E387D00D1219E /* Button */,
 				784BA81F22EDE31D0010239C /* XibView.swift */,
 				78256CAC22F31E7A0033866C /* ErrorView */,
@@ -265,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				784BA81C22ED38350010239C /* FormPresenter.swift */,
+				78CC420F2460941300A06DA9 /* MemeCellPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -335,6 +343,15 @@
 			path = Button;
 			sourceTree = "<group>";
 		};
+		78CC420A246086FD00A06DA9 /* MemeCell */ = {
+			isa = PBXGroup;
+			children = (
+				78CC420B2460871C00A06DA9 /* MemeCell.swift */,
+				78CC420C2460871C00A06DA9 /* MemeCell.xib */,
+			);
+			path = MemeCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -399,6 +416,7 @@
 				78A4373922EF8CDB00F84429 /* BoxFormView.xib in Resources */,
 				78DD4544245CF98A0040539F /* loading.json in Resources */,
 				78256CAE22F325260033866C /* ErrorView.xib in Resources */,
+				78CC420E2460871C00A06DA9 /* MemeCell.xib in Resources */,
 				7800936B22EA43CB003857DD /* closeness in Resources */,
 				78A4373E22EF922200F84429 /* BoxCell.xib in Resources */,
 				7800935F22EA427B003857DD /* LaunchScreen.storyboard in Resources */,
@@ -438,7 +456,9 @@
 				7800936D22EA47CB003857DD /* FormViewController.swift in Sources */,
 				78078BB322F0E64C0070AE67 /* URL+appending.swift in Sources */,
 				78A4373722EF8C9300F84429 /* BoxFormView.swift in Sources */,
+				78CC420D2460871C00A06DA9 /* MemeCell.swift in Sources */,
 				788A560C22EB6B700009E2F7 /* HTTPCaptionImage.swift in Sources */,
+				78CC42102460941300A06DA9 /* MemeCellPresenter.swift in Sources */,
 				788A560E22EB6D700009E2F7 /* HTTPGetMemes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

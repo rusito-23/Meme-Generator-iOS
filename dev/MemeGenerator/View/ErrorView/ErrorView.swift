@@ -23,30 +23,17 @@ import UIKit
     @IBOutlet weak var errorMessageLabel: UILabel!
     
     @IBAction func dismissButtonPressed(_ sender: Any) {
-        guard let superView = superview else { return }
-        UIView.animate(withDuration: 0.5, animations: { [weak self] in
-            guard let self = self else { return }
-            self.frame.origin.x = superView.bounds.origin.x + self.mainWindow.frame.width
-        }, completion: { [weak self] _ in
-            self?.removeFromSuperview()
-        })
+        self.hide()
     }
 
     // MARK: Setup
-
-    private var mainWindow: UIWindow {
-        return UIApplication.shared.keyWindow!
-    }
     
     override func setupWithSuperView(_ superView: UIView) {
         self.autoresizesSubviews = false
         self.clipsToBounds = true
         self.frame = mainWindow.frame
         mainWindow.addSubview(self)
-        self.frame.origin.x = superView.bounds.origin.x + mainWindow.frame.width
-        UIView.animate(withDuration: 0.5, animations: {
-            self.frame.origin.x = superView.bounds.origin.x
-        })
+        show(on: superView)
     }
 
     override func awakeFromNib() {
@@ -54,9 +41,32 @@ import UIKit
         setup()
     }
 
-    func setup() {
+    private func setup() {
         self.backgroundColor = .white
         self.errorMessageLabel.font = MainFont.title()
+    }
+
+    // MARK: Show hide animations
+
+    private var mainWindow: UIWindow {
+        return UIApplication.shared.keyWindow!
+    }
+
+    private func show(on superView: UIView) {
+        self.frame.origin.x = superView.bounds.origin.x + mainWindow.frame.width
+        UIView.animate(withDuration: 0.5, animations: {
+            self.frame.origin.x = superView.bounds.origin.x
+        })
+    }
+
+    private func hide() {
+        guard let superview = superview else { return }
+        UIView.animate(withDuration: 0.5, animations: { [weak self] in
+            guard let self = self else { return }
+            self.frame.origin.x = superview.bounds.origin.x + self.mainWindow.frame.width
+        }, completion: { [weak self] _ in
+            self?.removeFromSuperview()
+        })
     }
     
 }

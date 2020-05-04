@@ -16,7 +16,6 @@
 "ACCESS_ALERT_TITLE" = "Ouch! We are sorry :(";
 "ACCESS_ALERT_MSG" = "CopyFace needs Camera and Photo Library access!\
 Please allow this from the Settings app.";
-
 "SHARE_ALERT_TITLE" = "Ouch! We are sorry :(";
 "SHARE_ALERT_MSG" = "Looks like you have nothing to share.";
 
@@ -32,18 +31,20 @@ Please allow this from the Settings app.";
 // MARK: ERRORS:
 
 "ERR_TITLE" = "Ouch! We are sorry :(";
-
 "ERR_GENERIC" = "We are having some kind of weird error.\
 Please try again in a few minutes!";
-
 "ERR_NO_TEMPLATE" = "You didn't select any template.\
 Please choose one!";
-
 "ERR_NO_TEMPLATE_RES" = "We are having a hard time loading the template list.\
 Please try again in a few minutes!";
-
 "ERR_TEMPLATE_LOADING" = "There was an error while loading the template.\
 Please try again in a few minutes!";
-
 "ERR_PREVIEW_LOADING" = "There was an error while loading the preview.\
 Please try again in a few minutes!";
+
+// MARK: TEMPLATE VIEW:
+
+"CHOOSE_YOUR_TEMPLATE" = "Choose your template";
+"SELECT_CUSTOM_TEMPLATE" = "Select a custom image!";
+"S_OR" = "or";
+"MEME_NO_NAME" = "Oops! Could not find this meme's name!";

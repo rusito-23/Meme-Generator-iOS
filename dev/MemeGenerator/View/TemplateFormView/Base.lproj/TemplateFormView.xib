@@ -11,6 +11,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TemplateFormView" customModule="MemeGenerator" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="upR-Qd-DtY"/>
+                <outlet property="continueButton" destination="CNZ-Tb-d8u" id="z6F-l1-qWv"/>
+                <outlet property="orLabel" destination="UB8-rP-z6u" id="qe0-Du-LvT"/>
                 <outlet property="selectCustom" destination="nln-8H-mg6" id="H6S-Jp-PM7"/>
                 <outlet property="selectTemplate" destination="07P-J5-MNv" id="CVy-hs-XkK"/>
             </connections>
@@ -20,7 +22,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="230"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Choose your template!" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="07P-J5-MNv">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CHOOSE_YOUR_TEMPLATE" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="07P-J5-MNv">
                     <rect key="frame" x="16" y="16" width="343" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="Sjg-cQ-OU0"/>
@@ -31,12 +33,12 @@
                 <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNZ-Tb-d8u" customClass="CustomButton" customModule="MemeGenerator" customModuleProvider="target">
                     <rect key="frame" x="32" y="148" width="311" height="36"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <state key="normal" title="Continue"/>
+                    <state key="normal" title="BTN_CONTINUE"/>
                     <connections>
                         <action selector="onContinue:" destination="-1" eventType="touchUpInside" id="QZk-pP-5nb"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UB8-rP-z6u">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S_OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UB8-rP-z6u">
                     <rect key="frame" x="16" y="74" width="343" height="18"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="18" id="UVO-84-N7y"/>
@@ -45,7 +47,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a custom image!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nln-8H-mg6">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SELECT_A_CUSTOM_IMAGE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nln-8H-mg6">
                     <rect key="frame" x="16" y="100" width="343" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="7bK-gg-RbC"/>
