@@ -27,4 +27,4 @@ A **ImgFlip Meme API User** is required to run the project. It can be added by a
 
 ## DEMO
 
-![Demo with template](doc/Demo_with_template.gif)
+![Demo with template](doc/demo.gif)
